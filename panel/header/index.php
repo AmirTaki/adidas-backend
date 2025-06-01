@@ -63,9 +63,8 @@
                     <a href="<?= asset(''); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
-                    <a href = '<?= asset(''); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                    <a href = '<?= asset('panel/header/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
                 </td>
-            
             </tr>
            <?php  }  ?>
 
