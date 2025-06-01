@@ -1,3 +1,9 @@
+<?php
+    require_once "functions/pdo_connection.php";
+    require_once "functions/helpers.php";
+
+    $table = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,11 +62,9 @@
                 
                 <div class = 'header-item' >
                     <ul>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
+                        <?php foreach($table as $title){?>
+                            <li><?= $title->title; ?></li>
+                        <?php  } ?>
                     </ul>
                 </div>
                  
