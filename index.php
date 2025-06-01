@@ -62,9 +62,12 @@
                 
                 <div class = 'header-item' >
                     <ul>
-                        <?php foreach($table as $title){?>
-                            <li><?= $title->title; ?></li>
-                        <?php  } ?>
+                        <?php foreach($table as $title){
+                            if ($title->status == 10) {?>
+                                <li><?= $title->title; ?></li>
+                            <?php } 
+                            } 
+                        ?>
                     </ul>
                 </div>
                  
