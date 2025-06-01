@@ -12,6 +12,6 @@
     <?php require_once "./layouts/navbar.php"?>
     <?php require_once './layouts/sidebar.php' ?>
 </body>
-<script src = '<?= asset('assets/js/panel_header.js') ?>'></script>
+<script src = '<?= asset('src/script/panel.js') ?>'></script>
 
 </html>
