@@ -2,6 +2,9 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+    if(isset($_POST['title']) and $_POST['title'] !== ""){
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@
             
             <!-- title  -->
             <label for="name" >Title</label>
-            <input class = '' type="text" name="name_list" id="nameid" placeholder = 'name ...'>
+            <input class = '' type="text" name="title" id="nameid" placeholder = 'name ...'>
         
             <!-- submit -->
             <input type="submit" value="Create" class = 'sing_button'>

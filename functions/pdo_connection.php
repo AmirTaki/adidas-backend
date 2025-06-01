@@ -77,5 +77,15 @@ function createAccountToUserTable ($name, $email, $password, $dbname, $table){
     }
 }
 
+// operations dataBase
+function operationsDataBase ($dbName, $query, $execute = null){
+    $pdo = connectDataBase($dbName);
+    $statment = $pdo->prepare($query);
+    $statment =  $execute == null ? $statment->execute() : $statment->execute($execute);
+    return $statment;
+}
+
+
+
 
 ?>
