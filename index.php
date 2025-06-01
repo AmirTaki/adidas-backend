@@ -2,7 +2,7 @@
     require_once "functions/pdo_connection.php";
     require_once "functions/helpers.php";
 
-    $table = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
+    $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +62,7 @@
                 
                 <div class = 'header-item' >
                     <ul>
-                        <?php foreach($table as $title){
+                        <?php foreach($tableHeader as $title){
                             if ($title->status == 10) {?>
                                 <li><?= $title->title; ?></li>
                             <?php } 
@@ -99,26 +99,15 @@
         </div>
 
         <div class = "sidebar-container">
-            <div class = "sidebar-item">
-                <div>item1</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>
-            <div class = "sidebar-item">
-                <div>item2</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>
-            <div class = "sidebar-item">
-                <div>item3</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>
-            <div class = "sidebar-item">
-                <div>item4</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>
-            <div class = "sidebar-item">
-                <div>item5</div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>
+            <?php foreach($tableHeader as $title){
+                if ($title->status == 10) {?>
+                <div class = "sidebar-item">
+                    <div><?= $title->title ?></div>
+                    <div><i class="bi bi-chevron-right"></i></div>
+                </div>
+            <?php }
+            }
+            ?>
         </div>
 
         <div class = "siderbar-list">
