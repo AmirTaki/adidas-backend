@@ -1,3 +1,10 @@
+<?php 
+    require_once 'functions/helpers.php';
+    require_once 'functions/pdo_connection.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

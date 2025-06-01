@@ -1,7 +1,7 @@
 
 
-<sidebar>
-        <div class = 'deactive' >
+<sidebar class = "deactive">
+        <div >
             <div class = 'item_sidebar'  style="border: none;        background-color: rgb(250, 250, 250);;">
                 <div style="opacity: 0;">
                     exit
@@ -23,10 +23,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/users') ?>">Table</a>
+                    <a href="">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/users/create.php') ?>">Accout</a>
+                    <a href="">Accout</a>
                 </div>                
         
             </div>
@@ -42,10 +42,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/menu') ?>">Table</a>
+                    <a href="">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/menu/create.php') ?>">Accout</a>
+                    <a href="">Accout</a>
                 </div>                
         
             </div>
@@ -62,10 +62,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/category') ?>">Category Table</a>
+                    <a href="">Category Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/product') ?>">Product Table</a>
+                    <a href="">Product Table</a>
                 </div>  
         
             </div>
@@ -82,10 +82,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/video') ?>">Table</a>
+                    <a href="">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/video/create.php') ?>">Create</a>
+                    <a href="">Create</a>
                 </div>  
         
             </div>
@@ -102,10 +102,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/advert') ?>">Table</a>
+                    <a href="">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/advert/create.php') ?>">Create</a>
+                    <a href="">Create</a>
                 </div> 
             </div>
 
