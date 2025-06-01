@@ -57,7 +57,7 @@
 
                 <!-- settings -->
                 <td id = 'setting_td'>
-                    <a href="<?= asset('')?>" class = 'changeStatus_button' >Change Status</a>
+                    <a href="<?= asset('panel/header/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
                     <a href="<?= asset(''); ?>" class = 'edit_button'>Edit</a>
