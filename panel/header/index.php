@@ -60,7 +60,7 @@
                     <a href="<?= asset('panel/header/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
-                    <a href="<?= asset(''); ?>" class = 'edit_button'>Edit</a>
+                    <a href="<?= asset('panel/header/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
                     <a href = '<?= asset('panel/header/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
