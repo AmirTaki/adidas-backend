@@ -3,7 +3,7 @@
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
     if(isset($_POST['title']) and $_POST['title'] !== ""){
-        
+        operationsDataBase("adidas", "INSERT INTO adidas.header SET title = ?, created_at = NOW()") ? redirect("panel/header") : ""
     }
 ?>
 
@@ -22,7 +22,7 @@
         
     <div style = 'padding-top:150px'>
 
-        <form action="<?= url(''); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
+        <form action="<?= url('panel/header/create.php'); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
             
             <!-- title  -->
             <label for="name" >Title</label>
