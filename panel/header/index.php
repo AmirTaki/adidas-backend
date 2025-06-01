@@ -33,17 +33,41 @@
                 <th id = 'title_id'>button</th>
                 <th id = 'status_th'>status</th>
                 <th id = 'setting_th'>setting</th>
-                
             </tr>
 
             <?php 
-          
             $Table =   readTable ("adidas", "SELECT * FROM adidas.header", $sigle = false, $execute = null);
-            var_dump($Table);
             foreach($Table as $item) {
-                var_dump($item);
-                }
             ?>
+            <tr>
+                <!-- id -->
+                <td><?= $item->id; ?></td>
+                
+                <!-- title -->
+                <td><?= $item->title ?></td>
+                   
+                <!-- status -->
+                <td class = 'status_hidden'>
+                    <?php if ($item->status == 10) { ?>
+                    <a href="" class = 'enable_click'>enable</a>
+                    <?php } else { ?>
+                    <a href="" class = 'disable_click'>disable</a>
+                    <?php } ?>
+                </td>
+
+                <!-- settings -->
+                <td id = 'setting_td'>
+                    <a href="<?= asset('')?>" class = 'changeStatus_button' >Change Status</a>
+                </td>
+                <td>
+                    <a href="<?= asset(''); ?>" class = 'edit_button'>Edit</a>
+                </td>
+                <td>
+                    <a href = '<?= asset(''); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                </td>
+            
+            </tr>
+           <?php  }  ?>
 
         </table>
     </div>
