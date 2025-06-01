@@ -18,7 +18,7 @@
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy' >
         <div>Header Table</div>
-        <a href="<?= asset('') ?>" class = 'create_button'>Create</a>
+        <a href="<?= asset('panel/header/create.php') ?>" class = 'create_button'>Create</a>
     </div>
 
 
@@ -36,41 +36,15 @@
                 
             </tr>
 
-            <tr>
-                <!-- id -->
-                <td>id</td>
-                
-           
-                <!-- product -->
-                <td>product</td>
-                
-                <!-- category name or categor id -->
-                <td>category name</td>
-               
-
-                <td> status</td>
-                <!-- status -->
-                <td class = 'status_hidden'>
-                       
-                    
-                    <a href="" class = 'enable_click'>enable</a>
-
-                        
-                    <a href="" class = 'disable_click'>disable</a>
+            <?php 
           
-                </td>
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.header", $sigle = false, $execute = null);
+            var_dump($Table);
+            foreach($Table as $item) {
+                var_dump($item);
+                }
+            ?>
 
-                <!-- settings -->
-                <td id = 'setting_td'>
-                    <a href="<?= asset('')?>" class = 'changeStatus_button' >Change Status</a>
-                 
-                    <a href="<?= asset(''); ?>" class = 'edit_button'>Edit</a>
-                 
-                    <a href = '<?= asset(''); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
-                </td>
-                
-            </tr>
-           
         </table>
     </div>
     <script src = "<?= url('src/script/panel.js') ?>"></script>

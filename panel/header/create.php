@@ -3,7 +3,7 @@
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
     if(isset($_POST['title']) and $_POST['title'] !== ""){
-        operationsDataBase("adidas", "INSERT INTO adidas.header SET title = ?, created_at = NOW()") ? redirect("panel/header") : ""
+        operationsDataBase("adidas", "INSERT INTO adidas.header SET title = ?, created_at = NOW() ",[$_POST['title']]) ? redirect("panel/header") : "";
     }
 ?>
 

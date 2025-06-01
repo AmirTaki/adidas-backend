@@ -56,11 +56,11 @@ function createUserTable ($dbName){
 }
 
 //read table to dataBase 
-function readTable ($dbName, $query, $sigle = true, $execute = null){
+function readTable ($dbName, $query, $single = true, $execute = null){
     $pdo = connectDataBase($dbName);
     $statment = $pdo->prepare($query);
     $execute = null ? $statment->execute() : $statment->execute($execute);
-    $reading =   $sigle ? $statment->fetch() : $statment.fetchAll();
+    $reading  = $single ? $statment->fetch() : $statment->fetchAll();
     return $reading;
 }
 
