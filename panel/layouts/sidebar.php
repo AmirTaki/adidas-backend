@@ -1,7 +1,7 @@
 
 
-<sidebar class = "deactive">
-        <div >
+<sidebar >
+        <div  class = "deactive">
             <div class = 'item_sidebar'  style="border: none;        background-color: rgb(250, 250, 250);;">
                 <div style="opacity: 0;">
                     exit

@@ -1,19 +1,3 @@
-let clickOpen = document.getElementById("click_open")
-let sidebar = document.querySelector("sidebar")
-clickOpen.addEventListener("click",(e)=> {
-    sidebar.className = "active";
-})
-console.log(clickOpen)
-
-
-
-
-
-
-
-
-
-
 function all (staticClass, row , deacitve , active, flash = null, flash_up = null, flash_down = null,){
 
     if( document.querySelectorAll(staticClass)[row].className == deacitve){
