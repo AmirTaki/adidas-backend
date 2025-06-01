@@ -1,0 +1,230 @@
+
+
+<sidebar>
+        <div class = 'deactive' >
+            <div class = 'item_sidebar'  style="border: none;        background-color: rgb(250, 250, 250);;">
+                <div style="opacity: 0;">
+                    exit
+                </div>
+                <div>
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+
+            <!-- USERS -->
+            <div class = 'item_sidebar'>
+                <div>
+                    USERS
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/users') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/users/create.php') ?>">Accout</a>
+                </div>                
+        
+            </div>
+            <!-- MENU HEADER -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Menu Header
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/menu') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/menu/create.php') ?>">Accout</a>
+                </div>                
+        
+            </div>
+
+            <!-- megaMenu -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Mega Menu
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/category') ?>">Category Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/product') ?>">Product Table</a>
+                </div>  
+        
+            </div>
+           
+            <!-- video table -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Video 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/video') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/video/create.php') ?>">Create</a>
+                </div>  
+        
+            </div>
+           
+            <!-- advert  -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Advert 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/advert') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/advert/create.php') ?>">Create</a>
+                </div> 
+            </div>
+
+            <!-- grid image  -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Grid Image 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/grid_img') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/grid_img/create.php') ?>">Create</a>
+                </div> 
+            </div>
+           
+            <!-- background -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Wallpaper 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/background') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/background/create.php') ?>">Create</a>
+                </div> 
+            </div>
+           
+            <!-- move pictuer  -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Move Picture 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/move_img') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/move_img/create.php') ?>">Create</a>
+                </div> 
+            </div>
+           
+            <!-- title nike -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Title Nike 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/title_nike') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/title_nike/create.php') ?>">Create</a>
+                </div> 
+            </div>
+           
+            <!-- COLUMN LIST NIKE -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Column list Nike 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/title_column') ?>">Title Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/item_column') ?>">Item Table</a>
+                </div> 
+            </div>
+
+            <!-- FOOTER -->
+            <div class = 'item_sidebar'>
+                <div>
+                   FOOTER 
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/footer_title') ?>">Title Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/footer_item') ?>">Item Table</a>
+                </div> 
+                <div>
+                    <a href="<?= asset('panel/footer_button') ?>">Below Table</a>
+                </div> 
+            </div>
+       
+        </div>
+    </sidebar>
