@@ -1,9 +1,10 @@
 <?php 
-    require_once '../functions/helpers.php';
-    require_once '../functions/pdo_connection.php';
-    require_once '../functions/check_section.php'
+    require_once "../functions/helpers.php";
+    require_once "../functions/pdo_connection.php";
+    require_once "../functions/check_section.php";
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +17,8 @@
 </head>
 <body>
     
-    <?php require_once "./layouts/navbar.php"?>
-    <?php require_once './layouts/sidebar.php' ?>
+    <?php require_once "./layouts/navbar.php" ;?>
+    <?php require_once './layouts/sidebar.php' ;?>
 </body>
 <script src = '<?= asset('src/script/panel.js') ?>'></script>
 

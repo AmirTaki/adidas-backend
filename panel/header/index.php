@@ -17,8 +17,8 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy' >
-        <div>Advert Table</div>
-        <a href="<?= asset('panel/advert/create.php') ?>" class = 'create_button'>Create</a>
+        <div>Header Table</div>
+        <a href="<?= asset('') ?>" class = 'create_button'>Create</a>
     </div>
 
 

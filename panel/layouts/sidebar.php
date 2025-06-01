@@ -1,5 +1,3 @@
-
-
 <sidebar >
         <div  class = "deactive">
             <div class = 'item_sidebar'  style="border: none;        background-color: rgb(250, 250, 250);;">
@@ -33,7 +31,7 @@
             <!-- MENU HEADER -->
             <div class = 'item_sidebar'>
                 <div>
-                    Menu Header
+                    Header
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -42,7 +40,7 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="">Table</a>
+                    <a href="<?= url('panel/header/')?>">Table</a>
                 </div>                
                 <div>
                     <a href="">Accout</a>
