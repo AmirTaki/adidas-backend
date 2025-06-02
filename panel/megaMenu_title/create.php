@@ -4,6 +4,16 @@
     require_once "../../functions/pdo_connection.php";
 
    $headerTable =  readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
+    if(isset($_POST['category']) and $_POST['category'] !== "" and 
+       isset($_POST['title']) and $_POST['title'] !== ""
+    ){
+        $table = readTable ("adidas", "SELECT * FROM adidas.header WHERE title = ?", $single = true, $execute = [$_POST['title']]);
+        if($table){
+          $operation =   operationsDataBase ("adidas", "INSERT INTO adidas.megaMenu_title SET category = ? , title = ?, created_at = NOW()", $execute = [$_POST['category'], $_POST['title']]);
+          $operation ? redirect("panel/megaMenu_title") : '';
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +29,7 @@
     <?php require_once '../layouts/sidebar.php' ?>
  <div style = 'padding-top:150px'>
 
-        <form action="<?= url('panel/item_column/create.php'); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
+        <form action="<?= url('panel/megaMenu_title/create.php'); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
             
             <!-- Category  -->
             <label for="name" >Category</label>
