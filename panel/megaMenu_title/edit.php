@@ -5,7 +5,25 @@
 
     $tableHeader  =  readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
     if ($_GET['id']!== "" and isset($_GET['id'])){
-       $TableMegaMenu =  readTable ("adidas", "SELECT * FROM adidas.megaMenu_title WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+    
+        $TableMegaMenu =  readTable ("adidas", "SELECT * FROM adidas.megaMenu_title WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+      
+        if($TableMegaMenu){
+            if(isset($_POST['category']) and $_POST['category']!== ""  and isset($_POST['title']) and $_POST['title'] !== "" )
+            {
+               $operation =  operationsDataBase ("adidas", "UPDATE adidas.megaMenu_title SET category = ?, title = ?,  updated_at = NOW() WHERE id = ?", $execute = [$_POST['category'], $_POST['title'], $_GET['id']]);
+               $operation ? redirect("panel/megaMenu_title"): "";
+            }
+            else {
+                // redirect("panel/megaMenu_title");   
+            }
+        }
+        else {
+            redirect("panel/megaMenu_title");   
+        }
+    }
+    else {
+        redirect("panel/megaMenu_title");
     }
 ?>
 <!DOCTYPE html>
