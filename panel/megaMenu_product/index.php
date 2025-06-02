@@ -17,8 +17,8 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
-        <div>Mega Menu Title</div>
-        <a href="<?= asset('panel/megaMenu_title/create.php') ?>" class = 'create_button'>Create</a>
+        <div>Mega Menu Product</div>
+        <a href="<?= asset('panel/megaMenu_Product/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
@@ -26,6 +26,8 @@
                 <th>#</th>
                 <th id = 'categroy_id'>title</th>
                 <th id = 'title_id'>category</th>
+                <th id = 'title_id'>product</th>
+                <th id = 'title_id'>title</th>
                 <th id = 'status_th'>status</th>
                  <th id = 'title_id'>button</th>
                 <th id = 'setting_th'>edit</th>
@@ -39,6 +41,9 @@
             <tr>
                 <!-- id -->
                 <td><?= $item->id; ?></td>
+                
+                <!-- product -->
+                <td><?= $item->title ?></td>
                 
                 <!-- title -->
                 <td><?= $item->title ?></td>
@@ -57,13 +62,13 @@
 
                 <!-- settings -->
                 <td id = 'setting_td'>
-                    <a href="<?= asset('panel/megaMenu_title/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
+                    <a href="<?= asset('panel/megaMenu_product/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
-                    <a href="<?= asset('panel/megaMenu_title/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
+                    <a href="<?= asset('panel/megaMenu_product/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
-                    <a href = '<?= asset('panel/megaMenu_title/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                    <a href = '<?= asset('panel/megaMenu_product/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
                 </td>
             </tr>
            <?php  }  ?>
