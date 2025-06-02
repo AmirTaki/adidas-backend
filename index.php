@@ -163,19 +163,20 @@
     <?php } ?>
     
     <!-- MEGA MENU -->
-    <?php foreach($tableHeader as $itemHeader) { ?>    
+    <?php foreach($tableHeader as $title) { ?>    
         <div class = 'all-megaMenu deactive' >
             <div class = "megaMenu">
-                <?php  foreach($TableMegaMenuTitle as $itemMM) {
-                    if ($itemMM->title == $itemHeader->title){
-                        if($itemMM->status == 10){ 
+                <?php  foreach($TableMegaMenuTitle as $category) {
+                    if ($category->title == $title->title){
+                        if($category->status == 10){ 
                 ?>
                     <div>
-                        <ul><?= $itemMM->category ?> 
+                        <ul><?= $category->category ?> 
                             <?php foreach($TableMegaMenuProduct as $product){ 
-                                if($T?> 
-                                <li>column1</li>
-                            <?php } ?>
+                                if($product->category == $category->category && $product->title == $title->title ) {
+                                    if($product->status == 10) {?> 
+                                        <li><?= $product->product ?></li>
+                            <?php } } }?>
                         </ul>
                     </div>
                 <?php }}} ?>
