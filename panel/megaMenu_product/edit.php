@@ -2,6 +2,9 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+    $headerTable = readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
+    $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
+    
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +31,9 @@
             <label for="" >Category</label>
             <select class = 'select_class' name = 'category'>
            
-                <?php foreach($Category_table as $item) {?>
+                <?php foreach($categoryTable as $item) {?>
                 
-                <option value="<?= $item->category?>" <?php if($item->category == $Product_table->category) echo('selected'); ?> ><?= $item->category ?></option>
+                <option value="<?= $item->category?>" <?php  echo('selected'); ?> ><?= $item->category ?></option>
             
                 <?php } ?>
             </select>
@@ -41,9 +44,9 @@
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
            
-                <?php foreach($Menu_table as $items) {?>
+                <?php foreach($headerTable as $items) {?>
                 
-                <option value="<?= $items->title?>" <?php if($items->title == $Product_table->title) echo ('selected'); ?>  ><?= $items->title ?></option>
+                <option value="<?= $items->title?>" <?php  echo ('selected'); ?>  ><?= $items->title ?></option>
             
                 <?php } ?>
             </select>
