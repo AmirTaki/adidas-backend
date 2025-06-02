@@ -350,6 +350,18 @@ header{
            transform: translateX(0);
     }
 }
+.animationSiderbarToinToReverse{
+    animation: animationMoveSidebarReverse  linear 1s forwards ; 
+}
+@keyframes animationMoveSidebarReverse {
+    0%{
+        transform: translateX(0px);    
+    }
+    100% {
+        transform: translateX(+1000px);
+        display: none;
+    }
+}
 .sidebar-back{
     display: flex;
     align-items: center;

@@ -91,9 +91,17 @@ const closeSidebar = () => {
 // sider to sider
 let bag = document.querySelector("#bag")
 
+// open
 bag.addEventListener('click', (e)=>{
     document.querySelector(".sidebarToInTo").style.display = "flex"
+    document.querySelector(".sidebarToInTo").classList.remove('animationSiderbarToinToReverse')
     document.querySelector(".sidebarToInTo").classList.add('animationSiderbarToinTo')
+})
+
+// close 
+document.querySelector(".sidebar-back").addEventListener('click', (e)=> {
+    document.querySelector(".sidebarToInTo").classList.remove('animationSiderbarToinTo')
+    document.querySelector(".sidebarToInTo").classList.add('animationSiderbarToinToReverse')
 })
 
 
