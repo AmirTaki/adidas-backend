@@ -346,8 +346,11 @@ header{
    animation: animationMoveSidebar  linear 1s forwards ; 
 }
 @keyframes animationMoveSidebar {
+    0% {
+        display: flex;
+    }
     100%{
-           transform: translateX(0);
+        transform: translateX(0);
     }
 }
 .animationSiderbarToinToReverse{

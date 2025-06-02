@@ -142,7 +142,7 @@
     <?php foreach($tableHeader as $itemHeader) { ?>     
         <div class="sidebarToInTo">
             <div class = 'sidebar-back'>
-                <i class="bi bi-chevron-left">back</i>
+                <i class="bi bi-chevron-left backSider">back</i>
                 <i class="bi bi-x-lg"></i>
             </div>
             <div class = "sidebar-container">
