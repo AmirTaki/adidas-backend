@@ -4,6 +4,13 @@
     require_once "../../functions/pdo_connection.php";
     $TableHeader = readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
     $TableCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
+    if(isset($_POST['product']) and $_POST['product']!== "" and
+       isset($_POST['title']) and $_POST['title'] !== "" and 
+       isset($_POST['category'] and $_POST['category']!== "")
+    ){
+        
+    }
+ 
 ?>
 
 <!DOCTYPE html>
