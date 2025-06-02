@@ -2,6 +2,8 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+    $TableHeader = readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
+    $TableCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
            
-                <?php foreach($Menu_table as $item) {?>
+                <?php foreach($TableHeader as $item) {?>
                 
                 <option value="<?= $item->title?>"><?= $item->title ?></option>
             
@@ -36,7 +38,7 @@
             <label for="" >Category</label>
             <select class = 'select_class' name = 'category'>
            
-                <?php foreach($Category_table as $item) {?>
+                <?php foreach($TableCategory as $item) {?>
                 
                 <option value="<?= $item->category?>"><?= $item->category ?></option>
             
