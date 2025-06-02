@@ -6,7 +6,19 @@
     $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
     if(isset($_GET['id']) && $_GET["id"]!== ""){
         $productTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_product WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+        if($productTable){
+            if(isset($_POST['product']) && $_POST['product'] !== "" && 
+               isset($_POST['category']) && $_POST['category'] !== "" &&
+               isset($_POST['title']) && $_POST['title'] !== ""
+            ){
+                $checkTitle = readTable ("adidas", "SELECT * FROM adidas.header WHERE title = ?", $single = true, $execute = [$_POST['title']]);
+                $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
 
+            }
+        }
+        else {
+            redirect("panel/megaMenu_product");   
+        }
     }
     else {
         redirect("panel/megaMenu_product");
