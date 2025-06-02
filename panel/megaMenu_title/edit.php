@@ -2,6 +2,9 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+
+    $table_megaMenu_title =  readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $single = false, $execute = null);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +18,22 @@
 <body>
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
-
+    <div style = 'padding-top:150px'>
+        <form action="<?= url('panel/megaMenu_title/edit.php?id='.$_GET['id']); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
+            <!-- Category  -->
+            <label for="name" >Category</label>
+            <input class = '' type="text" name="category" id="nameid" value = '<?= $Category_table->category ?>'>
+  
+            <label for="" >Title</label>
+            <select class = 'select_class' name = 'title'>           
+                <?php foreach($table_megaMenu_title as $item) {?>
+                    <option value="<?= $item->title ?>" <?php  echo('selected'); ?> ><?= $item->title ?></option>
+                <?php } ?>
+            </select>
+            <!-- submit -->
+            <input type="submit" value="Update" class = 'sing_button'>
+            
+        </form>
+    </div>
     <script src = "<?= url('src/script/panel.js') ?>"></script>
 </body>
