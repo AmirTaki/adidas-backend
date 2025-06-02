@@ -12,8 +12,13 @@
                isset($_POST['title']) && $_POST['title'] !== ""
             ){
                 $checkTitle = readTable ("adidas", "SELECT * FROM adidas.header WHERE title = ?", $single = true, $execute = [$_POST['title']]);
-                $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
-
+                $checkCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title WHERE category = ?", $single = true, $execute = [$_POST['category']]);
+                if($categoryTable && $checkCategory){
+                    operationsDataBase ("adidas", "UPDATE adidas.megamenu_product SET title = ?, category = ?, product = ?, update_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['category'], $_POST['product'], $_GET['id']]);
+                }
+                else {
+                    redirect("panel/megaMenu_product");   
+                }
             }
         }
         else {
