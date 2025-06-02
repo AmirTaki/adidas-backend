@@ -14,7 +14,7 @@ let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
 let headerLi = document.querySelectorAll(".header-item li")
-let megaMenu = document.querySelector(".all-megaMenu")
+let megaMenu = document.querySelectorAll(".all-megaMenu")
 let headerItem = document.querySelector('.header-item')
 let  iconHeart = document.querySelectorAll(".heart-click")
 let arrowLeft = document.querySelector(".bi-arrow-left-square")
@@ -46,19 +46,27 @@ crossPage.addEventListener("click", (evnet)=> {
 })
 
 // megaMenu
+console.log(megaMenu)
+const closeMegeMenu = () => {
+    for (let i = 0; i < megaMenu.length; i++){
+        megaMenu[i].classList.add('deactive')
+    }
+}
 for (let i = 0;  i < headerLi.length ; i++){
     headerLi[i].addEventListener("mousemove", (event)=>{
-        megaMenu.classList.remove("deactive")
+        closeMegeMenu()
+        megaMenu[i].classList.remove("deactive");
     })
 }
 
-megaMenu.addEventListener("mouseleave",()=>{
-    megaMenu.classList.add("deactive")
-})
-
-const closeMegeMenu = () => {
-    megaMenu.classList.add("deactive")
+for (let i = 0;  i < headerLi.length ; i++){
+    headerLi[i].addEventListener("mouseleave", (event)=>{
+        closeMegeMenu()
+    })
 }
+
+
+
 
 // sidebar
 listIcon.addEventListener("click", e=>{
