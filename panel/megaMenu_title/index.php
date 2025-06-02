@@ -16,14 +16,10 @@
 <body>
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
-        <div class = 'line_categroy' >
+        <div class = 'line_categroy'>
         <div>Mega Menu Title</div>
-        <a href="<?= asset('panel/mageMenu_title/create.php') ?>" class = 'create_button'>Create</a>
-    </div>
-
-
-    
-    
+        <a href="<?= asset('panel/megaMenu_title/create.php') ?>" class = 'create_button'>Create</a>
+</div>
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
             <tr>
