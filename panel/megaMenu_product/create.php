@@ -36,40 +36,23 @@
             <!-- title  -->
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
-           
                 <?php foreach($TableHeader as $item) {?>
-                
                 <option value="<?= $item->title?>"><?= $item->title ?></option>
-            
                 <?php } ?>
             </select>
-
-
-     
             <!-- category  -->
             <label for="" >Category</label>
             <select class = 'select_class' name = 'category'>
-           
                 <?php foreach($TableCategory as $item) {?>
-                
                 <option value="<?= $item->category?>"><?= $item->category ?></option>
-            
                 <?php } ?>
             </select>
-
             <!-- product  -->
             <label for="name" >Product</label>
             <input class = '' type="text" name="product" id="nameid" placeholder = 'product name ...'>
-
-
-       
-        
             <!-- submit -->
             <input type="submit" value="Create" class = 'sing_button'>
-            
         </form>
     </div>
-
-
     <script src = "<?= url('src/script/panel.js') ?>"></script>
 </body>
