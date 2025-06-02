@@ -332,8 +332,8 @@ header{
 /* sidebar to in to */
 .sidebarToInTo{
     width: 100%;
-    /* height: 100vh; */
-    background-color: rgb(167, 13, 13);
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top : 0;
     z-index: 14;
@@ -343,7 +343,7 @@ header{
     display: none;
 }
 .animationSiderbarToinTo{
-   animation: animationMoveSidebar  linear 1s forwards ; 
+   animation: animationMoveSidebar  linear .4s forwards ; 
 }
 @keyframes animationMoveSidebar {
     0% {
@@ -354,7 +354,7 @@ header{
     }
 }
 .animationSiderbarToinToReverse{
-    animation: animationMoveSidebarReverse  linear 1s forwards ; 
+    animation: animationMoveSidebarReverse  linear .4s forwards ; 
 }
 @keyframes animationMoveSidebarReverse {
     0%{
@@ -370,10 +370,14 @@ header{
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(240, 240, 240) ;
+    border-bottom: 1px solid rgb(238, 238, 238) ;
+    background-color: rgb(255, 255, 255);
     padding: 15px ;
+    height: 70px;
     position: relative;
+    font-size: 19px;
 }
+
 
 /* MEGA MENU */
 .all-megaMenu{

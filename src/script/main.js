@@ -102,6 +102,13 @@ for (let i = 0; i < titleSidebar.length; i++){
     })
 }
 
+const closeSiderToSider = () => {
+    for (let i = 0; i < titleSidebar.length; i++){
+        sidebarToInTo[i].classList.remove('animationSiderbarToinTo')
+        sidebarToInTo[i].classList.add('animationSiderbarToinToReverse')
+    }
+}
+
 // close 
 for (let i = 0; i < backSider.length; i++ ){
     backSider[i].addEventListener("click", (e)=>{
@@ -201,6 +208,7 @@ const resize_window = () => {
 window.addEventListener("resize",(e)=> {
   resize_window()
   closeMegeMenu()
+  closeSiderToSider()
 })
 resize_window()
 hideBorderRight()
