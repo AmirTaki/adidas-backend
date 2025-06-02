@@ -16,6 +16,44 @@
 <body>
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
+     <div style = 'padding-top:150px'>
+
+        <form action="<?= url('panel/product/edit.php?id='.$_GET['id']); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
+            
+            <!-- Product  -->
+            <label for="name" >Product</label>
+            <input class = '' type="text" name="product" id="nameid" value = '<?= $Product_table->product ?>'>
+
+           <!-- Category  -->
+            <label for="" >Category</label>
+            <select class = 'select_class' name = 'category'>
+           
+                <?php foreach($Category_table as $item) {?>
+                
+                <option value="<?= $item->category?>" <?php if($item->category == $Product_table->category) echo('selected'); ?> ><?= $item->category ?></option>
+            
+                <?php } ?>
+            </select>
+
+
+
+            <!--  -->
+            <label for="" >Title</label>
+            <select class = 'select_class' name = 'title'>
+           
+                <?php foreach($Menu_table as $items) {?>
+                
+                <option value="<?= $items->title?>" <?php if($items->title == $Product_table->title) echo ('selected'); ?>  ><?= $items->title ?></option>
+            
+                <?php } ?>
+            </select>
+        
+            <!-- submit -->
+            <input type="submit" value="Update" class = 'sing_button'>
+            
+        </form>
+    </div>
+
     <script src = "<?= url('src/script/panel.js') ?>"></script>
 </body>
 </html>
