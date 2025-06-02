@@ -3,6 +3,7 @@
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
 
+   $headerTable =  readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
            
-                <?php foreach($Menu_table as $item) {?>
+                <?php foreach($headerTable as $item) {?>
                 
                 <option value="<?= $item->title?>"><?= $item->title ?></option>
             
