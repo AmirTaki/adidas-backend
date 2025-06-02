@@ -1,8 +1,10 @@
 <?php
     require_once "functions/pdo_connection.php";
     require_once "functions/helpers.php";
-
+    // header
     $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
+    // megaMenu_title
+    $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,78 +138,27 @@
         </div>
     </div> 
     <!-- MEGA MENU -->
-    <div class = 'all-megaMenu deactive' >
-        <div class = "megaMenu">
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
-            </div>
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
-            </div>
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
-            </div>
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
-            </div>
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
-            </div>
-            <div>
-                <ul>row1 
-                    <li>column1</li>
-                    <li>column2</li>
-                    <li>column3</li>
-                    <li>column4</li>
-                    <li>column5</li>
-                    <li>column6</li>
-                </ul>
+    <?php foreach($tableHeader as $itemHeader) { ?>    
+        <div class = 'all-megaMenu deactive' >
+            <div class = "megaMenu" style = "background-color : yellow">
+                <?php  foreach($TableMegaMenuTitle as $itemMM) {
+                    if ($itemMM->title == $itemHeader->title){
+                        if($itemMM->status == 10){ 
+                ?>
+                    <div>
+                        <ul><?= $itemMM->category ?> 
+                            <li>column1</li>
+                            <li>column2</li>
+                            <li>column3</li>
+                            <li>column4</li>
+                            <li>column5</li>
+                            <li>column6</li>
+                        </ul>
+                    </div>
+                <?php }}} ?>
             </div>
         </div>
-        <div class = 'title-megaMenu'>
-            <div>one</div>
-            <div>two</div>
-            <div>three</div>
-            <div>four</div>
-            <div>five</div>
-            <div>six</div>
-        </div>
-    </div>
+    <?php } ?>
     <!-- BETTWEN header & main -->
     <div class = "header-main">
         <div class = "header-main-up" >
