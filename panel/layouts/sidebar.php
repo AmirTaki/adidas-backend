@@ -63,7 +63,7 @@
                     <a href="<?= url('panel/megaMenu_title') ?>">Category Table</a>
                 </div>                
                 <div>
-                    <a href="">Product Table</a>
+                    <a href="<?= url("panel/megaMenu_product") ?> ">Product Table</a>
                 </div>  
         
             </div>

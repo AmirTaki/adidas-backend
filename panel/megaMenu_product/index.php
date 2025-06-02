@@ -29,13 +29,12 @@
                 <th id = 'title_id'>product</th>
                 <th id = 'title_id'>title</th>
                 <th id = 'status_th'>status</th>
-                 <th id = 'title_id'>button</th>
                 <th id = 'setting_th'>edit</th>
                 <th id = 'setting_th'>delete</th>
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
