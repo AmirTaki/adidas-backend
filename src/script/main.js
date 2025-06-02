@@ -91,7 +91,6 @@ const closeSidebar = () => {
     main.style.opacity = 1
 }
 // sider to sider
-let bag = document.querySelector("#bag")
 
 // open
 for (let i = 0; i < titleSidebar.length; i++){
@@ -114,6 +113,25 @@ for (let i = 0; i < backSider.length; i++ ){
     backSider[i].addEventListener("click", (e)=>{
         sidebarToInTo[i].classList.remove('animationSiderbarToinTo')
         sidebarToInTo[i].classList.add('animationSiderbarToinToReverse')
+    })
+}
+
+// sidebar to sidebar
+let siderContainer = document.querySelectorAll(".siderContainer")
+let sidebarToSidebar = document.querySelectorAll('.sidebarToSidebar')
+let sidebarToSidebarBack = document.querySelectorAll('.sidebarToSidebar-back')
+for (let i = 0; i< siderContainer.length; i++){
+    siderContainer[i].addEventListener("click", (e)=>{
+        sidebarToSidebar[i].style.display = "flex"
+        sidebarToSidebar[i].classList.remove('animationSiderbarToinToReverse')
+        sidebarToSidebar[i].classList.add('animationSiderbarToinTo')
+    })
+}
+
+for (let i = 0; i< sidebarToSidebarBack.length; i++){
+    sidebarToSidebarBack[i].addEventListener("click", (e)=>{
+        sidebarToSidebar[i].classList.remove('animationSiderbarToinTo')
+        sidebarToSidebar[i].classList.add('animationSiderbarToinToReverse')
     })
 }
 

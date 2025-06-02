@@ -330,7 +330,7 @@ header{
     padding: 10px 30px ;
 }
 /* sidebar to in to */
-.sidebarToInTo, .sidebarToSidebar{
+.sidebarToInTo{
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
@@ -342,6 +342,19 @@ header{
     transform: translateX(+1000px);
     display: none;
 }
+.sidebarToSidebar{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top : 0;
+    z-index: 14;
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateX(+1000px);
+    display: none;
+}
+
 .animationSiderbarToinTo{
    animation: animationMoveSidebar  linear .4s forwards ; 
 }
@@ -365,7 +378,7 @@ header{
         display: none;
     }
 }
-.sidebar-back{
+.sidebar-back, .sidebarToSidebar-back{
     display: flex;
     align-items: center;
     text-align: center;
