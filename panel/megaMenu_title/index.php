@@ -30,13 +30,14 @@
                 <th>#</th>
                 <th id = 'categroy_id'>title</th>
                 <th id = 'title_id'>category</th>
-                <th id = 'title_id'>button</th>
                 <th id = 'status_th'>status</th>
-                <th id = 'setting_th'>setting</th>
+                 <th id = 'title_id'>button</th>
+                <th id = 'setting_th'>edit</th>
+                <th id = 'setting_th'>delete</th>
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.megaMenu", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
@@ -45,6 +46,9 @@
                 
                 <!-- title -->
                 <td><?= $item->title ?></td>
+                
+                <!-- category -->
+                <td><?= $item->category ?></td>
                    
                 <!-- status -->
                 <td class = 'status_hidden'>
