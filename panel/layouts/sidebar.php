@@ -60,7 +60,7 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="">Category Table</a>
+                    <a href="<?= url('panel/megaMenu_title') ?>">Category Table</a>
                 </div>                
                 <div>
                     <a href="">Product Table</a>
