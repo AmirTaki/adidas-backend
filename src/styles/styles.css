@@ -339,11 +339,26 @@ header{
     z-index: 14;
     display: flex;
     flex-flow: column nowrap;
-    /* animation: siderAnimReverse .5s linear forwards; */
+    transform: translateX(+1000px);
+}
+.animationSiderbarToinTo{
+   animation: animationMoveSidebar  linear 5s forwards ; 
+}
+@keyframes animationMoveSidebar {
+    100%{
+           transform: translateX(0);
+    }
 }
 .sidebar-back{
-    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(240, 240, 240) ;
+    padding: 15px ;
+    position: relative;
 }
+
 /* MEGA MENU */
 .all-megaMenu{
     background-color: white;

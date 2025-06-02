@@ -141,7 +141,7 @@
     <!-- sidebar intointo -->
     <div class="sidebarToInTo">
         <div class = 'sidebar-back'>
-            <i>left</i>
+            <i class="bi bi-chevron-left">back</i>
             <i class="bi bi-x-lg"></i>
         </div>
         <div class = "sidebar-container">
