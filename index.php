@@ -4,7 +4,9 @@
     // header
     $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
     // megaMenu_title
-    $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $single = false, $execute = null);
+    $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
+    // megaMenu_product
+    $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -170,12 +172,10 @@
                 ?>
                     <div>
                         <ul><?= $itemMM->category ?> 
-                            <li>column1</li>
-                            <li>column2</li>
-                            <li>column3</li>
-                            <li>column4</li>
-                            <li>column5</li>
-                            <li>column6</li>
+                            <?php foreach($TableMegaMenuProduct as $product){ 
+                                if($T?> 
+                                <li>column1</li>
+                            <?php } ?>
                         </ul>
                     </div>
                 <?php }}} ?>
