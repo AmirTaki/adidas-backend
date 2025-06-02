@@ -34,21 +34,14 @@
             <!-- Category  -->
             <label for="name" >Category</label>
             <input class = '' type="text" name="category" id="nameid" placeholder = 'category name ...'>
-
-          
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
-           
-                <?php foreach($headerTable as $item) {?>
-                
-                <option value="<?= $item->title?>"><?= $item->title ?></option>
-            
+                <?php foreach($headerTable as $item) {?>        
+                    <option value="<?= $item->title?>"><?= $item->title ?></option>
                 <?php } ?>
             </select>
-        
             <!-- submit -->
             <input type="submit" value="Create" class = 'sing_button'>
-            
         </form>
     </div>
     <script src = "<?= url('src/script/panel.js') ?>"></script>
