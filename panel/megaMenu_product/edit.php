@@ -62,11 +62,8 @@
             <!-- title  -->
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
-           
-                <?php foreach($headerTable as $items) {?>
-                
-                <option value="<?= $items->title?>" <?php if($item->title == $productTable->title)  echo ('selected'); ?>  ><?= $items->title ?></option>
-            
+                <?php foreach($headerTable as $items) {?>                
+                    <option value="<?= $items->title?>" <?php if($items->title == $productTable->title)  echo ('selected'); ?>  ><?= $items->title ?></option>
                 <?php } ?>
             </select>
             <!-- submit -->
