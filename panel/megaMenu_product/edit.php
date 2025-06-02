@@ -5,6 +5,7 @@
     $headerTable = readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
     $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
     if(isset($_GET['id']) && $_GET["id"]!== ""){
+        $productTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_product WHERE id = ?", $single = true, $execute = [$_GET['id']]);
 
     }
     else {
@@ -30,7 +31,7 @@
             
             <!-- Product  -->
             <label for="name" >Product</label>
-            <input class = '' type="text" name="product" id="nameid" value = '<?= $Product_table->product ?>'>
+            <input class = '' type="text" name="product" id="nameid" value = '<?= $productTable->product ?>'>
 
            <!-- Category  -->
             <label for="" >Category</label>
@@ -38,7 +39,7 @@
            
                 <?php foreach($categoryTable as $item) {?>
                 
-                <option value="<?= $item->category?>" <?php  echo('selected'); ?> ><?= $item->category ?></option>
+                <option value="<?= $item->category?>" <?php if($item->category == $productTable->category) echo('selected'); ?> ><?= $item->category ?></option>
             
                 <?php } ?>
             </select>
@@ -51,7 +52,7 @@
            
                 <?php foreach($headerTable as $items) {?>
                 
-                <option value="<?= $items->title?>" <?php  echo ('selected'); ?>  ><?= $items->title ?></option>
+                <option value="<?= $items->title?>" <?php if($item->title == $productTable->title)  echo ('selected'); ?>  ><?= $items->title ?></option>
             
                 <?php } ?>
             </select>
