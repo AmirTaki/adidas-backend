@@ -340,9 +340,10 @@ header{
     display: flex;
     flex-flow: column nowrap;
     transform: translateX(+1000px);
+    display: none;
 }
 .animationSiderbarToinTo{
-   animation: animationMoveSidebar  linear 5s forwards ; 
+   animation: animationMoveSidebar  linear 1s forwards ; 
 }
 @keyframes animationMoveSidebar {
     100%{

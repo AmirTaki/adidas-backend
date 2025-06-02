@@ -88,12 +88,22 @@ const closeSidebar = () => {
     headerMain.style.opacity = 1
     main.style.opacity = 1
 }
+// sider to sider
+let bag = document.querySelector("#bag")
+
+bag.addEventListener('click', (e)=>{
+    document.querySelector(".sidebarToInTo").style.display = "flex"
+    document.querySelector(".sidebarToInTo").classList.add('animationSiderbarToinTo')
+})
+
+
 // icon Heart
 for (let i = 0; i< iconHeart.length ; i++){
     iconHeart[i].addEventListener("click",()=>{
         iconHeart[i].className = iconHeart[i].className === "bi bi-heart-fill heart-click" ? "bi bi-heart heart-click" : "bi bi-heart-fill heart-click"
     })
 }
+
 
 
 // arrow left & arrow right scroll image

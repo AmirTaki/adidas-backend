@@ -86,7 +86,7 @@
                        
                     </div>
                     <div>
-                        <i class="bi bi-handbag"></i>
+                        <i class="bi bi-handbag" id = 'bag'></i>
                     <div>
                 </div>
             </div>
