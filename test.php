@@ -16,7 +16,7 @@
     <?php }}}
 
 
-
+<div class="sidebar">
     <div class = "sidebar-container">
             <div class = "sidebar-item">
                 <div>item 1 </div>
@@ -36,3 +36,4 @@
             </div>  
         </div>
     </div> 
+</div>   

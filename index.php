@@ -137,6 +137,33 @@
             United States
         </div>
     </div>   
+        
+    <!-- sidebar intointo -->
+    <div class="sidebarToInTo">
+        <div class = 'sidebar-back'>
+            <i>left</i>
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <div class = "sidebar-container">
+                <div class = "sidebar-item">
+                    <div>item 1 </div>
+                    <div><i class="bi bi-chevron-right"></i></div>
+                </div>  
+                <div class = "sidebar-item">
+                    <div>item 2 </div>
+                    <div><i class="bi bi-chevron-right"></i></div>
+                </div>  
+                <div class = "sidebar-item">
+                    <div>item 3 </div>
+                    <div><i class="bi bi-chevron-right"></i></div>
+                </div>  
+                <div class = "sidebar-item">
+                    <div>item 4 </div>
+                    <div><i class="bi bi-chevron-right"></i></div>
+                </div>  
+            </div>
+        </div> 
+    </div>   
     
     <!-- MEGA MENU -->
     <?php foreach($tableHeader as $itemHeader) { ?>    
