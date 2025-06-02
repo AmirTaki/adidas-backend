@@ -45,10 +45,10 @@
                 <td><?= $item->title ?></td>
                 
                 <!-- title -->
-                <td><?= $item->title ?></td>
+                <td><?= $item->category ?></td>
                 
                 <!-- category -->
-                <td><?= $item->category ?></td>
+                <td><?= $item->product ?></td>
                    
                 <!-- status -->
                 <td class = 'status_hidden'>

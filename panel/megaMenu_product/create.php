@@ -6,9 +6,14 @@
     $TableCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
     if(isset($_POST['product']) and $_POST['product']!== "" and
        isset($_POST['title']) and $_POST['title'] !== "" and 
-       isset($_POST['category'] and $_POST['category']!== "")
+       isset($_POST['category']) and $_POST['category']!== ""
     ){
-        
+        $checkTitle =    readTable ("adidas", "SELECT * FROM adidas.header WHERE title = ?", $single = true, $execute = [$_POST['title']]);
+        $checkCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title WHERE category = ?", $single = true, $execute = [$_POST['category']]);
+        if($checkTitle && $checkCategory){
+           $operation =  operationsDataBase ("adidas", "INSERT INTO adidas.megamenu_product SET title = ?, category = ?, product = ?, created_at = NOW()", $execute = [$_POST['title'], $_POST['category'], $_POST['product']]);
+           $operation ? redirect("panel/megaMenu_product") : ""; 
+        }
     }
  
 ?>
