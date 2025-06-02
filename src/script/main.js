@@ -27,6 +27,8 @@ let containerSliderImg = document.querySelector('.container-slider-img')
 let listIcon = document.querySelector('.bi-list')
 let sidebar = document.querySelector(".sidebar")
 let crossSidebar = document.querySelector(".sidebar-svg-cross i")
+let titleSidebar = document.querySelectorAll(".title-sidebar")
+let sidebarToInTo = document.querySelectorAll('.sidebarToInTo')
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -92,11 +94,14 @@ const closeSidebar = () => {
 let bag = document.querySelector("#bag")
 
 // open
-bag.addEventListener('click', (e)=>{
-    document.querySelector(".sidebarToInTo").style.display = "flex"
-    document.querySelector(".sidebarToInTo").classList.remove('animationSiderbarToinToReverse')
-    document.querySelector(".sidebarToInTo").classList.add('animationSiderbarToinTo')
-})
+for (let i = 0; i < titleSidebar.length; i++){
+    titleSidebar[i].addEventListener("click", (e)=> {
+        document.querySelector(".sidebarToInTo").style.display = "flex"
+        document.querySelector(".sidebarToInTo").classList.remove('animationSiderbarToinToReverse')
+        document.querySelector(".sidebarToInTo").classList.add('animationSiderbarToinTo')
+    })
+}
+
 
 // close 
 document.querySelector(".sidebar-back").addEventListener('click', (e)=> {

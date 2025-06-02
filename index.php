@@ -104,7 +104,7 @@
             <?php foreach($tableHeader as $title){
                 if ($title->status == 10) {?>
                 <div class = "sidebar-item">
-                    <div><?= $title->title ?></div>
+                    <div class = 'title-sidebar'><?= $title->title ?></div>
                     <div><i class="bi bi-chevron-right"></i></div>
                 </div>
             <?php }
@@ -139,31 +139,26 @@
     </div>   
         
     <!-- sidebar intointo -->
-    <div class="sidebarToInTo">
-        <div class = 'sidebar-back'>
-            <i class="bi bi-chevron-left">back</i>
-            <i class="bi bi-x-lg"></i>
-        </div>
-        <div class = "sidebar-container">
-                <div class = "sidebar-item">
-                    <div>item 1 </div>
-                    <div><i class="bi bi-chevron-right"></i></div>
-                </div>  
-                <div class = "sidebar-item">
-                    <div>item 2 </div>
-                    <div><i class="bi bi-chevron-right"></i></div>
-                </div>  
-                <div class = "sidebar-item">
-                    <div>item 3 </div>
-                    <div><i class="bi bi-chevron-right"></i></div>
-                </div>  
-                <div class = "sidebar-item">
-                    <div>item 4 </div>
-                    <div><i class="bi bi-chevron-right"></i></div>
-                </div>  
+    <?php foreach($tableHeader as $itemHeader) { ?>     
+        <div class="sidebarToInTo">
+            <div class = 'sidebar-back'>
+                <i class="bi bi-chevron-left">back</i>
+                <i class="bi bi-x-lg"></i>
             </div>
-        </div> 
-    </div>   
+            <div class = "sidebar-container">
+                <?php  foreach($TableMegaMenuTitle as $itemMM) {
+                    if ($itemMM->title == $itemHeader->title){
+                        if($itemMM->status == 10){ 
+                ?>
+                    <div class = "sidebar-item">
+                        <div><?= $itemMM->category ?> </div>
+                        <div><i class="bi bi-chevron-right"></i></div>
+                    </div>  
+                <?php }}}?>
+               
+            </div> 
+        </div>   
+    <?php } ?>
     
     <!-- MEGA MENU -->
     <?php foreach($tableHeader as $itemHeader) { ?>    
