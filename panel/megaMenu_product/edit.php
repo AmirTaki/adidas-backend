@@ -4,7 +4,12 @@
     require_once "../../functions/pdo_connection.php";
     $headerTable = readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
     $categoryTable = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
-    
+    if(isset($_GET['id']) && $_GET["id"]!== ""){
+
+    }
+    else {
+        redirect("panel/megaMenu_product");
+    }
 ?>
 
 <!DOCTYPE html>
