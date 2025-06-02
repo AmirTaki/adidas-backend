@@ -14,7 +14,8 @@
                 $checkTitle = readTable ("adidas", "SELECT * FROM adidas.header WHERE title = ?", $single = true, $execute = [$_POST['title']]);
                 $checkCategory = readTable ("adidas", "SELECT * FROM adidas.megamenu_title WHERE category = ?", $single = true, $execute = [$_POST['category']]);
                 if($categoryTable && $checkCategory){
-                    operationsDataBase ("adidas", "UPDATE adidas.megamenu_product SET title = ?, category = ?, product = ?, update_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['category'], $_POST['product'], $_GET['id']]);
+                    $operation =  operationsDataBase ("adidas", "UPDATE adidas.megamenu_product SET title = ?, category = ?, product = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['category'], $_POST['product'], $_GET['id']]);
+                    $operation ? redirect("panel/megaMenu_product") : "";
                 }
                 else {
                     redirect("panel/megaMenu_product");   
@@ -43,13 +44,11 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
      <div style = 'padding-top:150px'>
+        <form action="<?= url('panel/megaMenu_product/edit.php?id='.$_GET['id']); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
 
-        <form action="<?= url('panel/product/edit.php?id='.$_GET['id']); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
-            
             <!-- Product  -->
             <label for="name" >Product</label>
             <input class = '' type="text" name="product" id="nameid" value = '<?= $productTable->product ?>'>
-
            <!-- Category  -->
             <label for="" >Category</label>
             <select class = 'select_class' name = 'category'>
@@ -60,10 +59,7 @@
             
                 <?php } ?>
             </select>
-
-
-
-            <!--  -->
+            <!-- title  -->
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>
            
@@ -73,7 +69,6 @@
             
                 <?php } ?>
             </select>
-        
             <!-- submit -->
             <input type="submit" value="Update" class = 'sing_button'>
             
