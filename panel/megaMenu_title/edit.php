@@ -3,8 +3,10 @@
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
 
-    $table_megaMenu_title =  readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $single = false, $execute = null);
-    
+    $tableHeader  =  readTable ("adidas", "SELECT * FROM adidas.header", $single = false, $execute = null);
+    if ($_GET['id']!== "" and isset($_GET['id'])){
+       $TableMegaMenu =  readTable ("adidas", "SELECT * FROM adidas.megaMenu_title WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +24,12 @@
         <form action="<?= url('panel/megaMenu_title/edit.php?id='.$_GET['id']); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
             <!-- Category  -->
             <label for="name" >Category</label>
-            <input class = '' type="text" name="category" id="nameid" value = '<?= $Category_table->category ?>'>
+            <input class = '' type="text" name="category" id="nameid" value = '<?= $TableMegaMenu->category ?>'>
   
             <label for="" >Title</label>
             <select class = 'select_class' name = 'title'>           
-                <?php foreach($table_megaMenu_title as $item) {?>
-                    <option value="<?= $item->title ?>" <?php  echo('selected'); ?> ><?= $item->title ?></option>
+                <?php foreach($tableHeader as $item) {?>
+                    <option value="<?= $item->title ?>" <?php  if($item->title == $TableMegaMenu->title) echo('selected'); ?> ><?= $item->title ?></option>
                 <?php } ?>
             </select>
             <!-- submit -->
