@@ -17,3 +17,22 @@
 
 
 
+    <div class = "sidebar-container">
+            <div class = "sidebar-item">
+                <div>item 1 </div>
+                <div><i class="bi bi-chevron-right"></i></div>
+            </div>  
+            <div class = "sidebar-item">
+                <div>item 2 </div>
+                <div><i class="bi bi-chevron-right"></i></div>
+            </div>  
+            <div class = "sidebar-item">
+                <div>item 3 </div>
+                <div><i class="bi bi-chevron-right"></i></div>
+            </div>  
+            <div class = "sidebar-item">
+                <div>item 4 </div>
+                <div><i class="bi bi-chevron-right"></i></div>
+            </div>  
+        </div>
+    </div> 

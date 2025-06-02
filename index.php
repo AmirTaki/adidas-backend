@@ -136,11 +136,12 @@
         <div class = "sidebar-languge">
             United States
         </div>
-    </div> 
+    </div>   
+    
     <!-- MEGA MENU -->
     <?php foreach($tableHeader as $itemHeader) { ?>    
         <div class = 'all-megaMenu deactive' >
-            <div class = "megaMenu" style = "background-color : yellow">
+            <div class = "megaMenu">
                 <?php  foreach($TableMegaMenuTitle as $itemMM) {
                     if ($itemMM->title == $itemHeader->title){
                         if($itemMM->status == 10){ 
@@ -156,6 +157,14 @@
                         </ul>
                     </div>
                 <?php }}} ?>
+            </div>
+            <div class = 'title-megaMenu'>
+                <div>one</div>
+                <div>two</div>
+                <div>three</div>
+                <div>four</div>
+                <div>five</div>
+                <div>six</div>
             </div>
         </div>
     <?php } ?>
