@@ -17,8 +17,8 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy' >
-        <div>Header Table</div>
-        <a href="<?= asset('panel/header/create.php') ?>" class = 'create_button'>Create</a>
+        <div>Mega Menu Title</div>
+        <a href="<?= asset('panel/mageMenu_title/create.php') ?>" class = 'create_button'>Create</a>
     </div>
 
 
@@ -29,14 +29,14 @@
             <tr>
                 <th>#</th>
                 <th id = 'categroy_id'>title</th>
-                <th id = 'title_id'>body</th>
+                <th id = 'title_id'>category</th>
                 <th id = 'title_id'>button</th>
                 <th id = 'status_th'>status</th>
                 <th id = 'setting_th'>setting</th>
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.header", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.megaMenu", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
