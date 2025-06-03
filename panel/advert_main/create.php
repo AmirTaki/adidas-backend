@@ -2,6 +2,14 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+
+    if (isset($_POST['title']) && $_POST['title'] !== "" &&
+        isset($_FILES['image']) && $_FILES['image']['name'] !== "" &&
+        isset($_POST['price']) && $_POST['price'] !== "" &&
+        iseet($_POST['body']) && $_POST['body'] !== ""
+    ){
+        
+    }
 ?>
 
 <!DOCTYPE html>
