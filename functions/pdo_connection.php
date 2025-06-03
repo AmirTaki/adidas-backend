@@ -100,4 +100,9 @@ function saveFiles ($locatoin, $fileName, $extension){
     return $imgUpload ? $path : false;
 }
 
+// delete files
+function deleteFiles($path){
+    $basePath = dirname(dirname(__DIR__));
+    file_exists($basePath . $path) ? unlink($basePath . $path) : "";
+}
 ?>
