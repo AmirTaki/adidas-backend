@@ -301,7 +301,7 @@
                         if($item->status == 10){ ?>
                             <div class = "window-img">
                                 <div>
-                                    <video src="<?= $item->path ?>" alt="">
+                                    <video src="<?= $item->path ?>" scale="tofit"  controls %poster="vorschaubild.jpg" alt="">
                                 </div>
                                 <div>
                                     <h3><?= $item->title ?></h3>
