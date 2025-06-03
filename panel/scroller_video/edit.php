@@ -58,7 +58,7 @@
             <label for="name" >Title</label>
             <input class = '' type="text" name="title" id="nameid" value  = '<?= $table->title ?>'>
             <!-- video -->
-            <td><video  src="<?= $item->path ?>"  style = "width:75px; height : 48px" scale="tofit"  controls %poster="vorschaubild.jpg"></video></td>
+            <td><video  src="<?= $table->path ?>"  style = "width:250px; height : 220px; margin-top : 50px" scale="tofit"  controls %poster="vorschaubild.jpg"></video></td>
             <!-- input video -->
             <label for="" >video</label>
             <input  type = 'file' name = 'video' class = 'input_create_category'>

@@ -11,6 +11,8 @@
     $TableAdvertMain = readTable ("adidas", "SELECT * FROM adidas.advert_main", $single = false, $execute = null);
     // scroller_image_main
     $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $single = false, $execute = null);
+    // scroller_video
+    $TableScrollerVideo = readTable ("adidas", "SELECT * FROM adidas.scroller_video", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -295,80 +297,21 @@
                 <i class="bi bi-arrow-right-circle"></i>
                  
                 <div class = "img-main scroll-vidoe"> 
-                
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-                    <div class = "window-img">
-                        <div>
-                            <video src="https://brand.assets.adidas.com/video/upload/f_auto:video,q_auto/if_w_gt_800,w_800/global_roland_garros_tennis_ubersonic_tennis_ss25_launch_hp_navigation_card_teaser_d_c2694a1754.mp4" alt="">
-                        </div>
-                        <div>
-                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque inventore dolorem excepturi!</p>
-                        </div>
-                        <div>
-                            <a href="">SHOP NOW</a>
-                        </div>        
-                    </div>
-
+                    <?php foreach($TableScrollerVideo as $item){
+                        if($item->status == 10){ ?>
+                            <div class = "window-img">
+                                <div>
+                                    <video src="<?= $item->path ?>" alt="">
+                                </div>
+                                <div>
+                                    <h3><?= $item->title ?></h3>
+                                    <p><?= $item->body ?></p>
+                                </div>
+                                <div>
+                                    <a href=""><?= $item->link ?></a>
+                                </div>        
+                            </div>
+                    <?php }} ?>
                 </div>
             </div>
            
