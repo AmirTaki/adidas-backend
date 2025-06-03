@@ -285,11 +285,8 @@
                             <i class="bi bi-heart heart-click"></i>                  
                         </div>
                     <?php }} ?>
-                   
-           
                     <i class="bi bi-arrow-left-square"></i>
                     <i class="bi bi-arrow-right-square"></i>
-
                 </div>
             </div>
             <!-- video scroll -->
