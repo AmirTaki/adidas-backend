@@ -17,12 +17,22 @@
                     $operation =  operationsDataBase ('adidas', "UPDATE adidas.advert_main SET title = ?, path = ?, price = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $path, $_POST['price'], $_POST['body'], $_GET['id']]);
                     $operation ? redirect('panel/advert_main') : "";
                 }
+                else {
+                var_dump("warning :The photo has not been saved! ");
+            }
             }
             else {
                 redirect('panel/advert_main');
             }
         }
-        // elseif()
+        elseif(          
+            isset($_POST['title']) && $_POST['title'] !== "" &&
+            isset($_POST['price']) && $_POST['price'] !== "" && 
+            isset($_POST['body']) && $_POST['body'] !== ""
+        ){
+            $operation = operationsDataBase ("adidas", "UPDATE adidas.advert_main SET title = ?, price = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['price'], $_POST['body'], $_GET['id']]);
+            $operation ? redirect('panel/advert_main') : "";
+        }
     }
     else {
         redirect('panel/advert_main');
