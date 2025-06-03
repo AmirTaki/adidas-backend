@@ -87,7 +87,7 @@ function operationsDataBase ($dbName, $query, $execute = null){
 
 // check image
 function checkImg ($img){
-    $allowedMimes = ["png", "jpg", "avif", "webp"];
+    $allowedMimes = ["png", "jpg", "avif", "webp", 'mp4', 'mp3', 'mpv','mov'];
     $imageMime = pathinfo($_FILES[$img]['name'], PATHINFO_EXTENSION);
     return in_array($imageMime, $allowedMimes);
 }
