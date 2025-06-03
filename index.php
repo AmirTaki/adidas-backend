@@ -168,7 +168,7 @@
                 if($title->title == $category->title){
                     if($category->status == 10){
     ?>    
-        <div class="sidebarToSidebar" style = 'background-color: yellow'>
+        <div class="sidebarToSidebar">
             <div class = 'sidebarToSidebar-back'>
                 <i class="bi bi-chevron-left backSider"> &nbsp;<?= $category->category ?></i>
                 <i class="bi bi-x-lg"></i>
