@@ -16,6 +16,31 @@
 <body>
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
+
+    <div style = 'padding-top:150px'>
+        <form action="<?= url('panel/advert_main/create.php'); ?>" method="post" class = 'form_create_category' enctype="multipart/form-data">
+            
+            <!-- title  -->
+            <label for="name" >Title</label>
+            <input class = '' type="text" name="title" id="nameid" placeholder = 'image title ...'>
+
+            <!-- image URL  -->
+            <label for="" >Image URL</label>
+            <input  type = 'file' name = 'image' class = 'input_create_category'>
+        
+            <!-- price  -->
+            <label for="name" >Price</label>
+            <input class = '' type="text" name="price" id="nameid" placeholder = 'enter the price ...'>
+        
+            <!-- body -->
+            <label for="" >Body</label>
+            <textarea name = 'body' placeholder = 'Enter the caption  ..... '></textarea>
+
+            <!-- submit -->
+            <input type="submit" value="Create" class = 'sing_button'>
+            
+        </form>
+    </div>
     <script src = "<?= url('src/script/panel.js') ?>"></script>
 </body>
 </html>
