@@ -6,13 +6,13 @@
         $table = readTable ("adidas", "SELECT * FROM adidas.scroller_video WHERE id = ?", $single = true, $execute = [$_GET['id']]);
         if(
           isset($_POST['title']) && $_POST['title'] !== "" &&
-          isset($_FILES['video']) && $_FILES['image']['video'] !== "" &&
+          isset($_FILES['video']) && $_FILES['video']['name'] !== "" &&
           isset($_POST['link']) && $_POST['link'] !== "" && 
           isset($_POST['body']) && $_POST['body'] !== ""
         ){
             if(checkImg ('video')){
                 deleteFiles($table->path);
-                $path = saveFiles ("/src/img/video/", "image", "mp4");
+                $path = saveFiles ("/src/img/video/", "video", "mp4");
                 if($path !== false){
                     $operation =  operationsDataBase ('adidas', "UPDATE adidas.scroller_video SET title = ?, path = ?, link = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $path, $_POST['link'], $_POST['body'], $_GET['id']]);
                     $operation ? redirect('panel/scroller_video') : "";

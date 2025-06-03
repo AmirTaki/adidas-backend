@@ -9,7 +9,7 @@
         isset($_POST['body']) && $_POST['body'] !== ""
     ){
         if(checkImg('video')){
-            $path =  saveFiles("/src/img/vedio/", 'video', "mp4");
+            $path =  saveFiles("/src/img/video/", 'video', "mp4");
             if($path !== false){
                 $operation =   operationsDataBase ("adidas", "INSERT INTO adidas.scroller_video SET title = ?, path = ?,  link = ?, body = ?, created_at = NOW()", $execute = [$_POST['title'], $path, $_POST['link'], $_POST['body']]);
                 $operation ? redirect('panel/scroller_video') : "";
