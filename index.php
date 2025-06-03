@@ -141,50 +141,51 @@
     </div>   
         
     <!-- sidebar intointo -->
-    <?php foreach($tableHeader as $itemHeader) { ?>     
+    <?php foreach($tableHeader as $header) { ?>     
         <div class="sidebarToInTo">
             <div class = 'sidebar-back'>
-                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $itemHeader->title ?></i>
+                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $header->title ?></i>
                 <i class="bi bi-x-lg"></i>
             </div>
             <div class = "sidebar-container">
-                <?php  foreach($TableMegaMenuTitle as $itemMM) {
-                    if ($itemMM->title == $itemHeader->title){
-                        if($itemMM->status == 10){ 
+                <?php  foreach($TableMegaMenuTitle as $category) {
+                    if ($category->title == $header->title){
+                        if($category->status == 10){ 
                 ?>
-                    <div class = "sidebar-item siderContainer">
-                        <div><?= $itemMM->category ?> </div>
-                        <div><i class="bi bi-chevron-right"></i></div>
-                    </div>  
+                    <div class = "siderContainer">
+                        <div><?= $category->category ?> </div>
+                            <div><i class="bi bi-chevron-right"></i></div>
+                        </div>         
                 <?php }}}?>
-               
             </div> 
         </div>   
     <?php } ?>
     
     <!-- sidebarToSidebar -->
-    <?php foreach($TableMegaMenuTitle as $category) { ?>     
+    <?php 
+    foreach ($tableHeader as $te){
+        for($i = 0; $i < sizeof($TableMegaMenuTitle); $i++){
+            if($te->title == $TableMegaMenuTitle[$i]->title){
+            ?>  
+   
         <div class="sidebarToSidebar" style = 'background-color: yellow'>
             <div class = 'sidebarToSidebar-back'>
-                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $category->category ?></i>
+                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $TableMegaMenuTitle[$i]->category .$i?></i>
                 <i class="bi bi-x-lg"></i>
             </div>
             <div class = "sidebar-container">
-                <?php  
-                    foreach($)
-                    foreach($TableMegaMenuProduct as $product) {
-                            if ($product->category == $category->category){
-                                if($product->status == 10){ 
+                <?php 
+                    for($j = 0 ; $j < sizeof($TableMegaMenuProduct); $j++){
+                        if($TableMegaMenuProduct[$j]->category == $TableMegaMenuTitle[$i]->category and $TableMegaMenuProduct[$j]->title == $te->title){
                 ?>
-                    <div class = "sidebar-item">
-                        <div><?= $product->product ?> </div>
-                        <div><i class="bi bi-chevron-right"></i></div>
-                    </div>  
-                <?php }}}?>
-               
-            </div> 
+                    <div class = "sidebarToSidebarItem">
+                        <div><?= $TableMegaMenuProduct[$j]->product ?> </div>
+                    </div>      
+                
+                <?php } } ?>    
+            </div>
         </div>   
-    <?php } ?>
+    <?php } }}?>
     
     <!-- MEGA MENU -->
     <?php foreach($tableHeader as $title) { ?>    

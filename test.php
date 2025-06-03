@@ -5,35 +5,26 @@
    $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
     // megaMenu_title
     $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megaMenu_title", $single = false, $execute = null);
+    $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $single = false, $execute = null);
 
-    foreach($tableHeader as $item){
-        foreach($TableMegaMenuTitle as $i){
-            if ($item->title == $i->title){
-        
-        ?>
-        <h1><?= $item->title ?> : <?= $i->category?></h1>
-       
-    <?php }}}
+foreach($tableHeader as $title){ ?>
+    <div style = "background-color : red"><?= $title->title ?> </div>
+    <?php foreach($TableMegaMenuTitle as $category){ 
+        if($category->title == $title->title){?>
+        <div style = "background-color : yellow"> <?= $category->category ?></div>
+        <?php foreach($TableMegaMenuProduct as $product) {
+           if($product->category == $category->category && $product->title == $title->title){ ?>
+           <div style = 'background-color : blue'><?= $product->product ?> </div>
+<?php }}}}}
 
+?>
+<br><br><br><br>
+<br><br><br><br>
 
-<div class="sidebar">
-    <div class = "sidebar-container">
-            <div class = "sidebar-item">
-                <div>item 1 </div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>  
-            <div class = "sidebar-item">
-                <div>item 2 </div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>  
-            <div class = "sidebar-item">
-                <div>item 3 </div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>  
-            <div class = "sidebar-item">
-                <div>item 4 </div>
-                <div><i class="bi bi-chevron-right"></i></div>
-            </div>  
-        </div>
-    </div> 
-</div>   
+<?php foreach($TableMegaMenuTitle as $category){ 
+        if($category->title){?>
+        <div style = "background-color : yellow"> <?= $category->category ?></div>
+        <?php foreach($TableMegaMenuProduct as $product) {
+           if($product->category == $category->category && $product->title == $category->title){ ?>
+           <div style = 'background-color : blue'><?= $product->product ?> </div>
+<?php }}}}

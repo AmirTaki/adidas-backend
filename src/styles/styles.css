@@ -290,7 +290,7 @@ header{
     flex-flow: column nowrap;
     padding: 10px 0;
 }
-.sidebar-item {
+.sidebar-item, .siderContainer {
     background-color: transparent;
     display: flex;
     flex-flow: row nowrap;
@@ -299,10 +299,28 @@ header{
     padding: 13px 35px;
     font-size:  20px;
 }
-.sidebar-item div i {
+.siderContainer {
+    background-color: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 35px;
+    font-size:  20px;
+}
+.sidebarToSidebarItem {
+    background-color: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 35px;
+    font-size:  20px;
+}
+.sidebar-item div i, .siderContainer div i  {
     font-size: 14px;
 }
-.sidebar-item:hover {
+.sidebar-item:hover, .siderContainer:hover {
     cursor: pointer;
 }
 .siderbar-list{
@@ -378,7 +396,19 @@ header{
         display: none;
     }
 }
-.sidebar-back, .sidebarToSidebar-back{
+.sidebar-back {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(238, 238, 238) ;
+    background-color: rgb(255, 255, 255);
+    padding: 15px ;
+    height: 70px;
+    position: relative;
+    font-size: 19px;
+}
+.sidebarToSidebar-back{
     display: flex;
     align-items: center;
     text-align: center;

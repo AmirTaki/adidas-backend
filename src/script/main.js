@@ -31,6 +31,8 @@ let titleSidebar = document.querySelectorAll(".sidebar-item")
 let sidebarToInTo = document.querySelectorAll('.sidebarToInTo')
 let backSider = document.querySelectorAll(".backSider");
 
+// console.log(document.querySelectorAll('.').length)
+
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
@@ -120,6 +122,7 @@ for (let i = 0; i < backSider.length; i++ ){
 let siderContainer = document.querySelectorAll(".siderContainer")
 let sidebarToSidebar = document.querySelectorAll('.sidebarToSidebar')
 let sidebarToSidebarBack = document.querySelectorAll('.sidebarToSidebar-back')
+
 for (let i = 0; i< siderContainer.length; i++){
     siderContainer[i].addEventListener("click", (e)=>{
         sidebarToSidebar[i].style.display = "flex"
@@ -128,8 +131,15 @@ for (let i = 0; i< siderContainer.length; i++){
     })
 }
 
+const closeSliderToSlider = () => {
+    for (let i = 0; i < sidebarToSidebar.length; i++){
+        sidebarToSidebar[i].classList.remove('animationSiderbarToinTo')
+        sidebarToSidebar[i].classList.add('animationSiderbarToinToReverse')
+    }
+}
 for (let i = 0; i< sidebarToSidebarBack.length; i++){
     sidebarToSidebarBack[i].addEventListener("click", (e)=>{
+        closeSliderToSlider()
         sidebarToSidebar[i].classList.remove('animationSiderbarToinTo')
         sidebarToSidebar[i].classList.add('animationSiderbarToinToReverse')
     })
