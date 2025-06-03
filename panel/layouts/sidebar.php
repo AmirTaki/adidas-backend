@@ -83,7 +83,7 @@
                     <a href="<?= url('panel/advert_main') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="">Create</a>
+                    <a href="<?= url('panel/advert_main/create.php') ?>">Create</a>
                 </div>  
         
             </div>
