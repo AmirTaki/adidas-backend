@@ -34,7 +34,7 @@
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.scroller_video", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
@@ -44,11 +44,11 @@
                 <!-- product -->
                 <td><?= $item->title ?></td>
                 
-                <!-- img -->
-                <td><img src="<?= $item->path ?>" alt="" style = "width:75px; height : 48px"></td>
+                <!-- video -->
+                <td><video src="<?= $item->path ?>"  style = "width:75px; height : 48px"></video></td>
 
-                <!-- price -->
-                <td><?= $item->price ?></td>
+                <!-- link -->
+                <td><?= $item->link ?></td>
                 
                 <!-- body -->
                 <td><?= substr($item->body, 0, 20)." ..." ?></td>
