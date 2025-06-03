@@ -9,6 +9,8 @@
     $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $single = false, $execute = null);
     // advert_main
     $TableAdvertMain = readTable ("adidas", "SELECT * FROM adidas.advert_main", $single = false, $execute = null);
+    // scroller_image_main
+    $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -272,48 +274,18 @@
                 </div>
                 <!-- image scroll -->
                 <div class = "img-main scroll-img">
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>                  
-                    </div>
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>  
-                    </div>
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>  
-                    </div>
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>  
-                    </div>
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>  
-                    </div>
-                    <div class = "window-img">
-                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2d201b536166482aa83e2c04002e8245_9366/House_of_Tiro_Pants_Black_JI6173_000_plp_model.jpg" alt="">
-                        <h4>$44</h4>
-                        <h3>Lorem ipsum dolor sit.</h3>
-                        <p>Sportswear</p>
-                        <i class="bi bi-heart heart-click"></i>  
-                    </div>
+                    <?php foreach($TableScrollerImage as $item) {
+                        if ($item->status == 10){
+                    ?>
+                        <div class = "window-img">
+                            <img src="<?= $item->path ?>" alt="">
+                            <h4>$<?= $item->price ?></h4>
+                            <h3><?= $item->body ?></h3>
+                            <p><?= $item->title ?></p>
+                            <i class="bi bi-heart heart-click"></i>                  
+                        </div>
+                    <?php }} ?>
+                   
            
                     <i class="bi bi-arrow-left-square"></i>
                     <i class="bi bi-arrow-right-square"></i>
