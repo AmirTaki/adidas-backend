@@ -45,7 +45,7 @@
                 <td><?= $item->title ?></td>
                 
                 <!-- video -->
-                <td><video src="<?= $item->path ?>"  style = "width:75px; height : 48px"></video></td>
+                <td><video src="<?= $item->path ?>"  style = "width:75px; height : 48px" scale="tofit"  controls %poster="vorschaubild.jpg"></video></td>
 
                 <!-- link -->
                 <td><?= $item->link ?></td>
