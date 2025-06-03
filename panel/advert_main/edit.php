@@ -2,6 +2,12 @@
     require_once "../../functions/check_section.php";
     require_once "../../functions/helpers.php";
     require_once "../../functions/pdo_connection.php";
+    if(isset($_GET['id']) && $_GET['id'] !== ""){
+        $table = readTable ("adidas", "SELECT * FROM adidas.advert_main WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+    }
+    else {
+        redirect('panel/advert_main');
+    }
 ?>
 
 <!DOCTYPE html>
