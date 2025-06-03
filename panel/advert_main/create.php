@@ -9,7 +9,8 @@
         isset($_POST['body']) && $_POST['body'] !== ""
     ){
         if(checkImg('image')){
-            
+          $path =  saveImg("/src/img/advertMain/", 'image');
+          var_dump($path);
         }
         else {
             redirect("panel/advert_main");

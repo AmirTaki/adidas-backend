@@ -95,7 +95,7 @@ function checkImg ($img){
 // save image
 function saveImg ($locatoin, $img){
     $basePath = dirname(dirname(__DIR__));
-    $path = '/adidas'.$location .date("Y_m_d_H_i_s"). "." . "avif";
+    $path = '/adidas'.$locatoin .date("Y_m_d_H_i_s"). "." . "avif";
     $imgUpload = move_uploaded_file($_FILES[$img]['tmp_name'], $basePath . $path);
     return $imgUpload ? $path : false;
 }
