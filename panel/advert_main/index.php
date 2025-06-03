@@ -45,7 +45,6 @@
                 <td><?= $item->title ?></td>
                 
                 <!-- img -->
-                <td><?= $item->path ?></td>
                 <td><img src="<?= $item->path ?>" alt="" style = "width:75px; height : 48px"></td>
 
                 <!-- price -->
