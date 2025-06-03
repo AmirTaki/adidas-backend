@@ -4,6 +4,25 @@
     require_once "../../functions/pdo_connection.php";
     if(isset($_GET['id']) && $_GET['id'] !== ""){
         $table = readTable ("adidas", "SELECT * FROM adidas.advert_main WHERE id = ?", $single = true, $execute = [$_GET['id']]);
+        if(
+          isset($_POST['title']) && $_POST['title'] !== "" &&
+          isset($_FILES['image']) && $_FILES['image']['name'] !== "" &&
+          isset($_POST['price']) && $_POST['price'] !== "" && 
+          isset($_POST['body']) && $_POST['body'] !== ""
+        ){
+            if(checkImg ('image')){
+                deleteFiles($table->path);
+                $path = saveFiles ("/src/img/advertMain/", "image", "avif");
+                if($path !== false){
+                    $operation =  operationsDataBase ('adidas', "UPDATE adidas.advert_main SET title = ?, path = ?, price = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $path, $_POST['price'], $_POST['body'], $_GET['id']]);
+                    $operation ? redirect('panel/advert_main') : "";
+                }
+            }
+            else {
+                redirect('panel/advert_main');
+            }
+        }
+        // elseif()
     }
     else {
         redirect('panel/advert_main');
