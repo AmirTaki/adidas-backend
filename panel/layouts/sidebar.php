@@ -91,7 +91,7 @@
             <!-- advert  -->
             <div class = 'item_sidebar'>
                 <div>
-                    scroller Image 
+                    scroller video
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -100,10 +100,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= url('panel/scrollerimg_Main') ?>">Table</a>
+                    <a href="<?= url('panel/scroller_video') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= url('panel/scrollerimg_Main/create.php') ?>">Create</a>
+                    <a href="<?= url('panel/scroller_video/create.php') ?>">Create</a>
                 </div> 
             </div>
 
