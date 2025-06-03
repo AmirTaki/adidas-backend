@@ -85,7 +85,12 @@ function operationsDataBase ($dbName, $query, $execute = null){
     return $statment;
 }
 
-
+// check image
+function checkImg ($img){
+    $allowedMimes = ["png", "jpg", "avif", "webp"];
+    $imageMime = pathinfo($_FILES[$img]['name'], PATHINFO_EXTENSION);
+    return in_array($imageMime, $allowedMimes);
+}
 
 
 ?>
