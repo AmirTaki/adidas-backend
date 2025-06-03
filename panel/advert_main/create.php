@@ -6,9 +6,14 @@
     if (isset($_POST['title']) && $_POST['title'] !== "" &&
         isset($_FILES['image']) && $_FILES['image']['name'] !== "" &&
         isset($_POST['price']) && $_POST['price'] !== "" &&
-        iseet($_POST['body']) && $_POST['body'] !== ""
+        isset($_POST['body']) && $_POST['body'] !== ""
     ){
-        
+        if(checkImg('image')){
+            
+        }
+        else {
+            redirect("panel/advert_main");
+        }
     }
 ?>
 
