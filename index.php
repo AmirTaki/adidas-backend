@@ -254,7 +254,7 @@
                     <div class = "window-img">
                         <!-- <img src="" alt=""> -->
                         <img src="<?= $item->path ?>" alt="">
-                        <h4><?= $item->price ?></h4>
+                        <h4>$<?= $item->price ?></h4>
                         <h3><?= $item->body ?> </h3>
                         <p><?= $item->title ?> </p>
                         <i class="bi bi-heart heart-click"></i>                
