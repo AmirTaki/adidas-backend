@@ -17,13 +17,9 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy' >
-        <div>Header Table</div>
+        <div>POPULAR TITLE TABLE</div>
         <a href="<?= asset('panel/popular_title/create.php') ?>" class = 'create_button'>Create</a>
-    </div>
-
-
-    
-    
+    </div>    
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
             <tr>
@@ -33,7 +29,6 @@
                 <th id = 'status_th'>status</th>
                 <th id = 'setting_th'>setting</th>
             </tr>
-
             <?php 
             $Table =   readTable ("adidas", "SELECT * FROM adidas.popular_title", $sigle = false, $execute = null);
             foreach($Table as $item) {
@@ -66,7 +61,6 @@
                 </td>
             </tr>
            <?php  }  ?>
-
         </table>
     </div>
     <script src = "<?= url('src/script/panel.js') ?>"></script>

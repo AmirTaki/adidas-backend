@@ -110,7 +110,7 @@
             <!-- grid image  -->
             <div class = 'item_sidebar'>
                 <div>
-                    Grid Image 
+                    Popular Title
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -119,10 +119,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/grid_img') ?>">Table</a>
+                    <a href="<?= asset('panel/popular_title') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/grid_img/create.php') ?>">Create</a>
+                    <a href="<?= asset('panel/popular_title/create.php') ?>">Create</a>
                 </div> 
             </div>
            
