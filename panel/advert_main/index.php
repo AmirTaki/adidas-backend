@@ -46,12 +46,13 @@
                 
                 <!-- img -->
                 <td><?= $item->path ?></td>
+                <td><img src="<?= $item->path ?>" alt="" style = "width:75px; height : 48px"></td>
 
                 <!-- price -->
                 <td><?= $item->price ?></td>
                 
                 <!-- body -->
-                <td><?= $item->body ?></td>
+                <td><?= substr($item->body, 0, 20)." ..." ?></td>
                 
         
                 <!-- status -->
