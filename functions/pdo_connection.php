@@ -93,10 +93,10 @@ function checkImg ($img){
 }
 
 // save image
-function saveImg ($locatoin, $img){
+function saveFiles ($locatoin, $fileName, $extension){
     $basePath = dirname(dirname(__DIR__));
-    $path = '/adidas'.$locatoin .date("Y_m_d_H_i_s"). "." . "avif";
-    $imgUpload = move_uploaded_file($_FILES[$img]['tmp_name'], $basePath . $path);
+    $path = '/adidas'.$locatoin .date("Y_m_d_H_i_s"). "." . $extension;
+    $imgUpload = move_uploaded_file($_FILES[$fileName]['tmp_name'], $basePath . $path);
     return $imgUpload ? $path : false;
 }
 

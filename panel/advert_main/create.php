@@ -9,7 +9,7 @@
         isset($_POST['body']) && $_POST['body'] !== ""
     ){
         if(checkImg('image')){
-            $path =  saveImg("/src/img/advertMain/", 'image');
+            $path =  saveFiles("/src/img/advertMain/", 'image', "avif");
             if($path !== false){
                 $operation =   operationsDataBase ("adidas", "INSERT INTO adidas.advert_main SET title = ?, path = ?, price = ?, body = ?, created_at = NOW()", $execute = [$_POST['title'], $path, $_POST['price'], $_POST['body']]);
                 $operation ? redirect('panel/advert_main') : "";
