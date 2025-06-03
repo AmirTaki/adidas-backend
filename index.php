@@ -13,6 +13,8 @@
     $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $single = false, $execute = null);
     // scroller_video
     $TableScrollerVideo = readTable ("adidas", "SELECT * FROM adidas.scroller_video", $single = false, $execute = null);
+    // popular_title
+    $TablePopularTitle = readTable ("adidas", "SELECT * FROM adidas.popular_title", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -322,12 +324,10 @@
 
             <!-- title table -->
             <div class="table">
-                <div>   <h1>title1</h1></div>
-                <div>   <h1>title2</h1></div>
-                <div>   <h1>title3</h1></div>
-                <div>   <h1>title4</h1></div>
-                <div>   <h1>title5</h1></div>
-                <div>   <h1>title6</h1></div>
+                <?php foreach($TablePopularTitle as $item){
+                    if ($item->status == 10){ ?>
+                <div>   <h1><?= $item->title ?></h1></div>
+                <?php }} ?>
             </div>
 
             <!-- related-resources slider image -->
