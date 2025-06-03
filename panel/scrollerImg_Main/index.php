@@ -18,7 +18,7 @@
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
         <div>Advert Main</div>
-        <a href="<?= asset('panel/advert_main/create.php') ?>" class = 'create_button'>Create</a>
+        <a href="<?= asset('panel/scrollerimg_Main/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
@@ -34,7 +34,7 @@
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.advert_main", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
@@ -65,13 +65,13 @@
 
                 <!-- settings -->
                 <td id = 'setting_td'>
-                    <a href="<?= asset('panel/advert_main/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
+                    <a href="<?= asset('panel/scrollerimg_Main/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
-                    <a href="<?= asset('panel/advert_main/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
+                    <a href="<?= asset('panel/scrollerimg_Main/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
-                    <a href = '<?= asset('panel/advert_main/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                    <a href = '<?= asset('panel/scrollerimg_Main/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
                 </td>
             </tr>
            <?php  }  ?>
