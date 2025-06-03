@@ -25,16 +25,16 @@
             <tr>
                 <th>#</th>
                 <th id = 'categroy_id'>title</th>
-                <th id = 'title_id'>category</th>
-                <th id = 'title_id'>product</th>
-                <th id = 'title_id'>title</th>
+                <th id = 'title_id'>image</th>
+                <th id = 'title_id'>price</th>
+                <th id = 'title_id'>body</th>
                 <th id = 'status_th'>status</th>
                 <th id = 'setting_th'>edit</th>
                 <th id = 'setting_th'>delete</th>
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.advert_main", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
@@ -44,12 +44,16 @@
                 <!-- product -->
                 <td><?= $item->title ?></td>
                 
-                <!-- title -->
-                <td><?= $item->category ?></td>
+                <!-- img -->
+                <td><?= $item->path ?></td>
+
+                <!-- price -->
+                <td><?= $item->price ?></td>
                 
-                <!-- category -->
-                <td><?= $item->product ?></td>
-                   
+                <!-- body -->
+                <td><?= $item->body ?></td>
+                
+        
                 <!-- status -->
                 <td class = 'status_hidden'>
                     <?php if ($item->status == 10) { ?>

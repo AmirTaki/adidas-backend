@@ -71,7 +71,7 @@
             <!-- video table -->
             <div class = 'item_sidebar'>
                 <div>
-                    Video 
+                    Advert main 
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -80,7 +80,7 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="">Table</a>
+                    <a href="<?= url('panel/advert_main') ?>">Table</a>
                 </div>                
                 <div>
                     <a href="">Create</a>
