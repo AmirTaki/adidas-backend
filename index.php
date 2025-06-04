@@ -15,6 +15,8 @@
     $TableScrollerVideo = readTable ("adidas", "SELECT * FROM adidas.scroller_video", $single = false, $execute = null);
     // popular_title
     $TablePopularTitle = readTable ("adidas", "SELECT * FROM adidas.popular_title", $single = false, $execute = null);
+    // related_resources
+    $TableRelatedResources = readTable ('adidas', "SELECT * FROM adidas.related_resources", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -339,77 +341,18 @@
 
                 <!-- slider img   -->
                 <div class = "container-slider-img">
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
+                    <?php 
+                    foreach($TableRelatedResources as $item){
+                        if($item->status == 10){
+                    ?>
+                        <div class = "item-slider-img">                     
+                            <img src="<?= $item->path ?>" alt="">
+                            <div class = "board-slider-img">
+                                <h4><?= $item->title ?></h4>
+                                <p><?= $item->body ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-                    <div class = "item-slider-img">                     
-                        <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/ED_087_How_to_Clean_Shoes_mh_d_f0806a86f8.jpg" alt="">
-                        <div class = "board-slider-img">
-                            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, officiis?</p>
-                        </div>
-                    </div>
-
+                    <?php }} ?>
                 </div>
             </div>
 
