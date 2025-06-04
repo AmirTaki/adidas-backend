@@ -19,6 +19,8 @@
     $TableRelatedResources = readTable ('adidas', "SELECT * FROM adidas.related_resources", $single = false, $execute = null);
     // menu_main
     $TableMenuMain = readTable ("adidas", "SELECT * FROM adidas.menu_main", $single = false, $execute = null);
+    // megaMenu_main
+    $TableMegaMenuMain = readTable ("adidas", "SELECT * FROM adidas.megamenu_main", $single = true, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -367,13 +369,12 @@
                     <ul class = "list-main-item-title">
                         <div class = 'title-ul'> <?= $title->title ?> <i class="bi bi-chevron-down"></i></div> 
                         <div class = 'item-li'>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
+                            <?php foreach($TableMegaMenuMain as $category) {
+                                if($category->title == $title->title){
+                                    if($category->status == 10){
+                            ?>
+                                <li><?= $category->category ?></li>
+                            <?php }}} ?>
                         </div>
                     </ul>
                 </div>   
