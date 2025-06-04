@@ -186,7 +186,7 @@
             <!-- COLUMN LIST NIKE -->
             <div class = 'item_sidebar'>
                 <div>
-                    Column list Nike 
+                    Board Black
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -195,10 +195,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/title_column') ?>">Title Table</a>
+                    <a href="<?= asset('panel/board_black') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/item_column') ?>">Item Table</a>
+                    <a href="<?= asset('panel/board_black/create.php') ?>">Create</a>
                 </div> 
             </div>
 
