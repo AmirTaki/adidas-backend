@@ -51,7 +51,9 @@
                 <!-- body -->
                 <td><?= substr($item->body, 0, 20)." ..." ?></td>
                 
-        
+                <!-- icon -->
+                <td><?= $item->icon ?></td>
+                
                 <!-- status -->
                 <td class = 'status_hidden'>
                     <?php if ($item->status == 10) { ?>
