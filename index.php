@@ -20,7 +20,7 @@
     // menu_main
     $TableMenuMain = readTable ("adidas", "SELECT * FROM adidas.menu_main", $single = false, $execute = null);
     // megaMenu_main
-    $TableMegaMenuMain = readTable ("adidas", "SELECT * FROM adidas.megamenu_main", $single = true, $execute = null);
+    $TableMegaMenuMain = readTable ("adidas", "SELECT * FROM adidas.megamenu_main", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
