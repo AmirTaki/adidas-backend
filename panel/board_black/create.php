@@ -10,7 +10,7 @@
 )
     {
 
-        $operation =   operationsDataBase ("adidas", "INSERT INTO adidas.board_black SET title = ?, caption = ?,  body = ?, icon = ?, created_at = NOW()", $execute = [$_POST['title'], $_POST['caption'], $_POST['icon'], $_POST['body']]);
+        $operation =   operationsDataBase ("adidas", "INSERT INTO adidas.board_black SET title = ?, caption = ?,  body = ?, icon = ?, created_at = NOW()", $execute = [$_POST['title'], $_POST['caption'], $_POST['body'], $_POST['icon']]);
         $operation ? redirect('panel/board_black') : "";
     }
     else {
