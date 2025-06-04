@@ -395,8 +395,8 @@
             <h1><?= $item->title ?></h1>
             <p><?= $item->caption ?></p>
             <p><?= $item->body ?></p>
-            <!-- <i class = "<?= $item->icon ?>">icon</i> -->
-            <?= $item->icon ?>
+            <i class = "<?= $item->icon ?>"></i>
+            <!-- <?= $item->icon ?> -->
         </div>
         <?php }} ?>
     </div>
