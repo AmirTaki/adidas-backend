@@ -18,7 +18,7 @@
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
         <div>BOARD BLACK</div>
-        <a href="<?= asset('panel/board-black/create.php') ?>" class = 'create_button'>Create</a>
+        <a href="<?= asset('panel/board_black/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
@@ -34,7 +34,7 @@
             </tr>
 
             <?php 
-            $Table =   readTable ("adidas", "SELECT * FROM adidas.board-black", $sigle = false, $execute = null);
+            $Table =   readTable ("adidas", "SELECT * FROM adidas.board_black", $sigle = false, $execute = null);
             foreach($Table as $item) {
             ?>
             <tr>
@@ -66,13 +66,13 @@
 
                 <!-- settings -->
                 <td id = 'setting_td'>
-                    <a href="<?= asset('panel/board-black/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
+                    <a href="<?= asset('panel/board_black/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
-                    <a href="<?= asset('panel/board-black/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
+                    <a href="<?= asset('panel/board_black/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
-                    <a href = '<?= asset('panel/board-black/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                    <a href = '<?= asset('panel/board_black/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
                 </td>
             </tr>
            <?php  }  ?>
