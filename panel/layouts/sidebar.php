@@ -205,7 +205,7 @@
             <!-- FOOTER -->
             <div class = 'item_sidebar'>
                 <div>
-                   FOOTER 
+                Menu Footer
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -214,13 +214,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/footer_title') ?>">Title Table</a>
+                    <a href="<?= asset('panel/footer_title') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/footer_item') ?>">Item Table</a>
-                </div> 
-                <div>
-                    <a href="<?= asset('panel/footer_button') ?>">Below Table</a>
+                    <a href="<?= asset('panel/footer_item') ?>">Create</a>
                 </div> 
             </div>
        
