@@ -167,7 +167,7 @@
             <!-- title nike -->
             <div class = 'item_sidebar'>
                 <div>
-                    Title Nike 
+                    Mega Menu Main 
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -176,10 +176,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/title_nike') ?>">Table</a>
+                    <a href="<?= asset('panel/megaMenu_main') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/title_nike/create.php') ?>">Create</a>
+                    <a href="<?= asset('panel/megaMenu_main/create.php') ?>">Create</a>
                 </div> 
             </div>
            
