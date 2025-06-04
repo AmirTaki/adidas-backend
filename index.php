@@ -23,6 +23,8 @@
     $TableMegaMenuMain = readTable ("adidas", "SELECT * FROM adidas.megamenu_main", $single = false, $execute = null);
     // board_black 
     $TableBoardBlack = readTable ("adidas", "SELECT * FROM adidas.board_black", $single = false, $execute = null);
+    // menu_footer
+    $TableMenuFooer = readTable ("adidas", "SELECT * FROM adidas.menu_footer", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -411,8 +413,12 @@
        
     <footer>
         <div class="container-footer">
+            <?php 
+                foreach($TableMenuFooer as $title){
+                    if ($title->status == 10){
+            ?>
             <div>
-                <ul>title
+                <ul><?=  $title->title ?>
                     <li>item</li>
                     <li>item</li>
                     <li>item</li>
@@ -422,61 +428,7 @@
                     <li>item</li>
                 </ul>
             </div>
-            <div>
-                <ul>title
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
-            <div>
-                <ul>title
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
-            <div>
-                <ul>title
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
-            <div>
-                <ul>title
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
-            <div>
-                <ul>title
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
+            <?php }} ?>
         </div>
         <div class = 'footer-black'>
             <div>
