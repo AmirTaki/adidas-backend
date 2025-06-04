@@ -148,7 +148,7 @@
             <!-- move pictuer  -->
             <div class = 'item_sidebar'>
                 <div>
-                    Move Picture 
+                    Menu Main
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -157,10 +157,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/move_img') ?>">Table</a>
+                    <a href="<?= asset('panel/menu_main') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/move_img/create.php') ?>">Create</a>
+                    <a href="<?= asset('panel/menu_main/create.php') ?>">Create</a>
                 </div> 
             </div>
            
