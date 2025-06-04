@@ -17,6 +17,8 @@
     $TablePopularTitle = readTable ("adidas", "SELECT * FROM adidas.popular_title", $single = false, $execute = null);
     // related_resources
     $TableRelatedResources = readTable ('adidas', "SELECT * FROM adidas.related_resources", $single = false, $execute = null);
+    // menu_main
+    $TableMenuMain = readTable ("adidas", "SELECT * FROM adidas.menu_main", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -358,9 +360,12 @@
 
            <!-- list main -->
             <div class = "list-main-container">
+                <?php foreach($TableMenuMain as $title){
+                    if ($title->status == 10){
+                ?>
                 <div class = "list-main-item">
                     <ul class = "list-main-item-title">
-                        <div class = 'title-ul'> title <i class="bi bi-chevron-down"></i></div> 
+                        <div class = 'title-ul'> <?= $title->title ?> <i class="bi bi-chevron-down"></i></div> 
                         <div class = 'item-li'>
                             <li>item</li>
                             <li>item</li>
@@ -371,53 +376,8 @@
                             <li>item</li>
                         </div>
                     </ul>
-                </div>     
-                <div class = "list-main-item">
-                    <ul class = "list-main-item-title">
-                    <div class = 'title-ul'> title <i class="bi bi-chevron-down"></i></div> 
-                        <div class = 'item-li'>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                        </div>
-                   
-                    </ul>
-                </div>     
-                <div class = "list-main-item">
-                    <ul class = "list-main-item-title">
-                        <div class = 'title-ul'> title <i class="bi bi-chevron-down"></i></div> 
-                        <div class = 'item-li'>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                        </div>
-                   
-                    </ul>
-                </div>     
-                <div class = "list-main-item">
-                    <ul class = "list-main-item-title">
-                       <div class = 'title-ul'> title <i class="bi bi-chevron-down"></i></div> 
-                        <div class = 'item-li'>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                            <li>item</li>
-                        </div>
-                   
-                    </ul>
-                </div>     
-                
+                </div>   
+                <?php }} ?>   
             </div>
         </div>
     </main>
