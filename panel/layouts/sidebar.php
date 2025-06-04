@@ -214,10 +214,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/footer_title') ?>">Table</a>
+                    <a href="<?= asset('panel/menu_footer') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/footer_item') ?>">Create</a>
+                    <a href="<?= asset('panel/menu_footer/create.php') ?>">Create</a>
                 </div> 
             </div>
        
