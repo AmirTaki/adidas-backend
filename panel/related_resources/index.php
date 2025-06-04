@@ -17,7 +17,7 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
-        <div>SCROLLER IMAGE MAIN</div>
+        <div>RELATED RESOURCES MAIN</div>
         <a href="<?= asset('panel/related_resources/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
