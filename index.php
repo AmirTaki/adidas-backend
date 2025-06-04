@@ -21,6 +21,8 @@
     $TableMenuMain = readTable ("adidas", "SELECT * FROM adidas.menu_main", $single = false, $execute = null);
     // megaMenu_main
     $TableMegaMenuMain = readTable ("adidas", "SELECT * FROM adidas.megamenu_main", $single = false, $execute = null);
+    // board_black 
+    $TableBoardBlack = readTable ("adidas", "SELECT * FROM adidas.board_black", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -385,20 +387,18 @@
 
     <!-- board black -->
     <div class="board-black">
+        <?php 
+        foreach ($TableBoardBlack as $item){
+            if ($item->status == 10){
+        ?>
         <div>  
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quas.</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem obcaecati sed voluptas magni facere, consequuntur ex tempore inventore nulla nesciunt optio in ipsum hic modi autem veniam natus incidunt beatae?
-            Ipsam nesciunt vitae perspiciatis vero possimus eos quas commodi! Fugiat natus obcaecati dolor, facere autem eius. Dignissimos totam non obcaecati error placeat id impedit expedita! Eveniet ratione asperiores repudiandae rerum!
-            Et nesciunt assumenda quam nulla aliquid, voluptatum ipsam numquam voluptate ducimus animi ut maxime adipisci earum quibusdam error, quae rem. Natus, voluptatum. Maiores, veritatis. Praesentium pariatur quam voluptates enim laborum.
-            Numquam ea quasi magnam aut nihil enim quae? Libero placeat ex quidem voluptas nihil maiores veritatis, reprehenderit beatae sit mollitia animi dolore quasi voluptatibus harum in delectus, error suscipit voluptatem!
-            Alias nemo incidunt rerum, sunt cum natus eaque itaque dolore beatae, maxime aut in eius at quas odit delectus tempore velit? Ex assumenda quod laboriosam beatae, voluptatem dolores ipsam molestiae?
-            Quae magni culpa eligendi officia quasi assumenda earum fuga ratione accusantium molestias! Esse, tempora nesciunt? Iusto sed quia consequuntur ducimus at perferendis qui dicta illo, optio magni similique soluta perspiciatis!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eum iste! Harum beatae, aut sed iure repellat nesciunt maiores quod numquam fugit ducimus porro saepe reprehenderit consequuntur impedit necessitatibus corrupti.
-            Est, animi rerum. Unde eos commodi voluptate aperiam similique, reprehenderit laboriosam odio ex, quos distinctio ad esse! Est, exercitationem enim ducimus doloremque nam, cupiditate maiores, nobis ipsam amet molestias quo!
-            Explicabo voluptas magni quod obcaecati modi asperiores dignissimos ipsam nostrum placeat, eius enim quas deserunt repellendus! Voluptatem ea non cumque dicta reprehenderit perferendis temporibus molestias et autem. Adipisci, soluta tempora!</p>
-            
-            <i>icon</i>
+            <h1><?= $item->title ?></h1>
+            <p><?= $item->caption ?></p>
+            <p><?= $item->body ?></p>
+            <!-- <i class = "<?= $item->icon ?>">icon</i> -->
+            <?= $item->icon ?>
         </div>
+        <?php }} ?>
     </div>
 
     <!-- OUR ADICLUB  -->
