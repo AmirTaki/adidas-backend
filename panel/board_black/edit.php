@@ -10,7 +10,7 @@
           isset($_POST['icon']) && $_POST['icon'] !== "" && 
           isset($_POST['body']) && $_POST['body'] !== ""
         ){
-            $operation =  operationsDataBase ('adidas', "UPDATE adidas.board_black SET title = ?, body = ?, icon = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['caption'], $_POST['icon'], $_POST['body'], $_GET['id']]);
+            $operation =  operationsDataBase ('adidas', "UPDATE adidas.board_black SET title = ?, caption = ?, icon = ?, body = ?, updated_at = NOW() WHERE id = ?", $execute = [$_POST['title'], $_POST['caption'], $_POST['icon'], $_POST['body'], $_GET['id']]);
             $operation ? redirect('panel/board_black') : "";
         }
     }
