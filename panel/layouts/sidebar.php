@@ -129,7 +129,7 @@
             <!-- background -->
             <div class = 'item_sidebar'>
                 <div>
-                    Wallpaper 
+                    Related Resources 
                 </div>
                 
                 <i class="bi bi-chevron-compact-down flash_js"></i>
@@ -138,10 +138,10 @@
 
             <div class = 'deactive static_item'>
                 <div>
-                    <a href="<?= asset('panel/background') ?>">Table</a>
+                    <a href="<?= asset('panel/related_resources') ?>">Table</a>
                 </div>                
                 <div>
-                    <a href="<?= asset('panel/background/create.php') ?>">Create</a>
+                    <a href="<?= asset('panel/related_resources/create.php') ?>">Create</a>
                 </div> 
             </div>
            
