@@ -41,14 +41,11 @@
                 <!-- id -->
                 <td><?= $item->id; ?></td>
                 
-                <!-- product -->
+                <!-- title -->
                 <td><?= $item->title ?></td>
                 
-                <!-- img -->
-                <td><img src="<?= $item->path ?>" alt="" style = "width:75px; height : 48px"></td>
-
-                     
-                <!-- body -->
+         
+                <!-- caption -->
                 <td><?= substr($item->caption, 0, 20)." ..." ?></td>
                 
                 <!-- body -->
