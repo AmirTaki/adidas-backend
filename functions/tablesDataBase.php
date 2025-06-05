@@ -9,6 +9,8 @@
     $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
     // megaMenu_product
     $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $single = false, $execute = null);
+    // background
+    $background = readTable ("adidas", "SELECT * FROM adidas.background", $single = true, $execute = null);
     // advert_main
     $TableAdvertMain = readTable ("adidas", "SELECT * FROM adidas.advert_main", $single = false, $execute = null);
     // scroller_image_main

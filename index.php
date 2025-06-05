@@ -221,15 +221,17 @@
           <i class="bi bi-arrow-right"></i>
         </div>
         <div class = 'header-img'>
-            <img src="./src/img/photo-1588110679566-158c6dea107c.avif" alt="">
-            <h1>title</h1>
-            <h4>another</h4>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <ul>
-                <li>item <i>icon</i></li>
-                <li>item <i>icon</i></li>
-                <li>item <i>icon</i></li>
-            </ul>
+            <?php { if ($background->status == 10) { ?>
+                <img src="<?= $background->path ?>" alt="">
+                <h1><?= $background->title ?></h1>
+                <h4><?= $background->caption ?></h4>
+                <p><?= $background->body ?></p>
+                <ul>
+                    <li>item <i>icon</i></li>
+                    <li>item <i>icon</i></li>
+                    <li>item <i>icon</i></li>
+                </ul>
+            <?php }} ?>
         </div>
     </div>
 
