@@ -27,6 +27,8 @@
     $TableMenuFooer = readTable ("adidas", "SELECT * FROM adidas.menu_footer", $single = false, $execute = null);
     // megeMenu_footer
     $TableMegaMenuFooter = readTable ("adidas", "SELECT * FROM adidas.megamenu_footer", $single = false, $execute = null);
+    // footer_column
+    $TableFooterColumn = readTable ("adidas", "SELECT * FROM adidas.footer_column", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -433,26 +435,17 @@
             <?php }} ?>
         </div>
         <div class = 'footer-black'>
+            <?php 
+                foreach($TableFooterColumn as $item) {
+                    if($item->status == 10){
+            ?>
             <div>
                 <ul>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
+                    <li><?= $item->category ?></li>
+                </ul> 
             </div>
-            <div>
-                <ul>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                </ul>
-            </div>
+            <?php }} ?>
+          
         </div>
     </footer>
     <div class = 'upper-footer'>
