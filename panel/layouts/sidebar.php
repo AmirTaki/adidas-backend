@@ -237,6 +237,23 @@
                     <a href="<?= asset('panel/megaMenu_footer/create.php') ?>">Create</a>
                 </div> 
             </div>
+            <div class = 'item_sidebar'>
+                <div>
+                Footer Column
+                </div>
+                
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= asset('panel/footer_column') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= asset('panel/footer_column/create.php') ?>">Create</a>
+                </div> 
+            </div>
        
         </div>
     </sidebar>
