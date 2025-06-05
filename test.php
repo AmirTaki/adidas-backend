@@ -28,3 +28,12 @@ foreach($tableHeader as $title){ ?>
            if($product->category == $category->category && $product->title == $category->title){ ?>
            <div style = 'background-color : blue'><?= $product->product ?> </div>
 <?php }}}}
+
+
+
+
+
+
+
+
+

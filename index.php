@@ -435,17 +435,22 @@
             <?php }} ?>
         </div>
         <div class = 'footer-black'>
-            <?php 
-                foreach($TableFooterColumn as $item) {
-                    if($item->status == 10){
+            <?php
+                $list = ["column Left", "column Right"];
+                foreach($list as $index){         
             ?>
             <div>
+                <?php 
+                    foreach($TableFooterColumn as $item) {
+                        if($item->title == $index){
+                            if($item->status == 10){
+                ?>
                 <ul>
                     <li><?= $item->category ?></li>
                 </ul> 
+                <?php }}} ?>
             </div>
-            <?php }} ?>
-          
+            <?php } ?>
         </div>
     </footer>
     <div class = 'upper-footer'>
