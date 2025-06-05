@@ -17,8 +17,8 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
-        <div>SCROLLER IMAGE MAIN</div>
-        <a href="<?= asset('panel/scrollerimg_Main/create.php') ?>" class = 'create_button'>Create</a>
+        <div>BACKGROUND MAIN</div>
+        <a href="<?= asset('panel/background/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
         <table style = 'width : 95%'>
@@ -69,13 +69,13 @@
 
                 <!-- settings -->
                 <td id = 'setting_td'>
-                    <a href="<?= asset('panel/scrollerimg_Main/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
+                    <a href="<?= asset('panel/background/status.php?id='.$item->id);?>" class = 'changeStatus_button' >Change Status</a>
                 </td>
                 <td>
-                    <a href="<?= asset('panel/scrollerimg_Main/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
+                    <a href="<?= asset('panel/background/edit.php?id='.$item->id); ?>" class = 'edit_button'>Edit</a>
                 </td>
                 <td>
-                    <a href = '<?= asset('panel/scrollerimg_Main/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
+                    <a href = '<?= asset('panel/background/delete.php?id='.$item->id); ?>' class = 'delete_button' onclick = 'functionCheck()'>Delete</a>
                 </td>
             </tr>
            <?php  }  ?>

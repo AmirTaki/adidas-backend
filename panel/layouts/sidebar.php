@@ -82,7 +82,7 @@
             <!-- background -->
             <div class = 'item_sidebar'>
                 <div>
-                    Mega Menu
+                    Background Main
                 </div>
                 <i class="bi bi-chevron-compact-down flash_js"></i>
                 <!-- <i class="bi bi-chevron-compact-up"></i> -->
