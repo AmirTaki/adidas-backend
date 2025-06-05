@@ -20,16 +20,15 @@
             <i class="bi bi-x-square"></i>
         </div>
         <div class = "board-page-move">
+            <?php foreach($TablePageMove as $item){
+                if($item->status == 10){ 
+            ?>
             <div>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, beatae?</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro, suscipit error, magni eaque natus reprehenderit sint, quod omnis assumenda facilis ut dolor tenetur itaque similique. Harum officiis maxime repudiandae.</p>
-                <a href="">Lorem ipsum, dolor sit amet consecte</a>
+                <h3><?= $item->title ?></h3>
+                <p><?= $item->body ?></p>
+                <a href=""><?= $item->link ?></a>
             </div>
-            <div>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, beatae?</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro, suscipit error, magni eaque natus reprehenderit sint, quod omnis assumenda facilis ut dolor tenetur itaque similique. Harum officiis maxime repudiandae.</p>
-                <a href="">Lorem ipsum, dolor sit amet consecte</a>
-            </div>
+            <?php }} ?>
         </div>
     </div>
    

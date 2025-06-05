@@ -17,7 +17,7 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
-        <div>SCROLLER VIDEO MAIN</div>
+        <div>PAGE MOVE</div>
         <a href="<?= asset('panel/page_move/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
