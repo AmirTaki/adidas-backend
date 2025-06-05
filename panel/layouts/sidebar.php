@@ -25,19 +25,32 @@
                 </div>                
                 <div>
                     <a href="">Accout</a>
+                </div>               
+            </div>
+            <!-- ITEM HEADER -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Item Header
+                </div>
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= url('panel/item_header/')?>">Table</a>
                 </div>                
-        
+                <div>
+                    <a href="<?= url('panel/item_header/create.php')?>">Accout</a>
+                </div>                
             </div>
             <!-- PAGE MOVE -->
             <div class = 'item_sidebar'>
                 <div>
                     Page Move
                 </div>
-                
                 <i class="bi bi-chevron-compact-down flash_js"></i>
                 <!-- <i class="bi bi-chevron-compact-up"></i> -->
             </div>
-
             <div class = 'deactive static_item'>
                 <div>
                     <a href="<?= url('panel/page_move/')?>">Table</a>
@@ -45,7 +58,6 @@
                 <div>
                     <a href="<?= url('panel/page_move/create.php')?>">Accout</a>
                 </div>                
-        
             </div>
             <!-- MENU HEADER -->
             <div class = 'item_sidebar'>
