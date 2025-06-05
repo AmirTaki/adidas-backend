@@ -221,15 +221,21 @@
           <i class="bi bi-arrow-right"></i>
         </div>
         <div class = 'header-img'>
-            <?php { if ($background->status == 10) { ?>
+            <?php {
+                $link  = $background->link;
+                $items = explode(",", $link);
+              ;
+                if ($background->status == 10) { ?>
                 <img src="<?= $background->path ?>" alt="">
                 <h1><?= $background->title ?></h1>
                 <h4><?= $background->caption ?></h4>
                 <p><?= $background->body ?></p>
                 <ul>
-                    <li>item <i>icon</i></li>
-                    <li>item <i>icon</i></li>
-                    <li>item <i>icon</i></li>
+                    <?php 
+                        foreach($items as $item){
+                    ?>
+                    <li><?=  $item?><i class="bi bi-arrow-right"></i></li>
+                    <?php } ?>
                 </ul>
             <?php }} ?>
         </div>
