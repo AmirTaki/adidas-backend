@@ -79,16 +79,30 @@
         
             </div>
 
+            <!-- background -->
+            <div class = 'item_sidebar'>
+                <div>
+                    Mega Menu
+                </div>
+                <i class="bi bi-chevron-compact-down flash_js"></i>
+                <!-- <i class="bi bi-chevron-compact-up"></i> -->
+            </div>
+            <div class = 'deactive static_item'>
+                <div>
+                    <a href="<?= url('panel/background') ?>">Table</a>
+                </div>                
+                <div>
+                    <a href="<?= url("panel/background/create.php") ?> ">Create</a>
+                </div>  
+            </div>
             <!-- megaMenu -->
             <div class = 'item_sidebar'>
                 <div>
                     Mega Menu
                 </div>
-                
                 <i class="bi bi-chevron-compact-down flash_js"></i>
                 <!-- <i class="bi bi-chevron-compact-up"></i> -->
             </div>
-
             <div class = 'deactive static_item'>
                 <div>
                     <a href="<?= url('panel/megaMenu_title') ?>">Category Table</a>
@@ -96,7 +110,6 @@
                 <div>
                     <a href="<?= url("panel/megaMenu_product") ?> ">Product Table</a>
                 </div>  
-        
             </div>
            
             <!-- video table -->
