@@ -17,7 +17,7 @@
     <?php require_once '../layouts/navbar.php' ?>
     <?php require_once '../layouts/sidebar.php' ?>
         <div class = 'line_categroy'>
-        <div>Mega Menu Footer Title</div>
+        <div>Footer Column</div>
         <a href="<?= asset('panel/footer_column/create.php') ?>" class = 'create_button'>Create</a>
 </div>
     <div class = 'table_catgory' >
