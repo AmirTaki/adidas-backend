@@ -110,22 +110,25 @@
 
         <div class = "siderbar-list">
             <div>
-                item
+                My Account
             </div>
             <div>
-                item
+                Exchanges & Returns
             </div>
             <div>
-                item
+                Order Tracker
             </div>
             <div>
-                item
+                adiClub
             </div>
             <div>
-                item
+                Gift Cards
             </div>
             <div>
-                item
+                Store Locator
+            </div>
+            <div>
+                Mobile Apps
             </div>
         </div>
 
@@ -214,7 +217,7 @@
     <!-- BETTWEN header & main -->
     <div class = "header-main">
         <div class = "header-main-up" >
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.</h3>
+            <h3>Save big on summer essentials with up to 40% off.</h3>
           <i class="bi bi-arrow-right"></i>
         </div>
         <div class = 'header-img'>
@@ -236,7 +239,7 @@
             <!-- title -->
             <div class = "title-main">
                 <div>
-                    <h3>Lorem ipsum dolor sit</h3>
+                    <h3>Still <br/>Interested?</h3>
                 </div>
             </div>
             <!-- image -->
@@ -257,9 +260,9 @@
             <div class = 'button-scroll'>
                 <!-- button -->
                 <div class = 'size-button'>
-                    <button>button</button>
-                    <button>button</button>
-                    <button>button</button>
+                    <button>New Arrivals</button>
+                    <button>Best Sellers</button>
+                    <button>New to Sale</button>
                     <a href="">view all</a>
                 </div>
                 <!-- image scroll -->
@@ -382,8 +385,8 @@
     <!-- OUR ADICLUB  -->
     <div class="our-adiclub">
         <div>
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h1>
-            <button>button sign up <i>icon</i></button>
+            <h1>JOIN OUR ADICLUB & GET 15% OFF. </h1>
+            <button>SIGN UP FOR FREE <i class="bi bi-arrow-right"></i></button>
         </div>
     </div>
        
