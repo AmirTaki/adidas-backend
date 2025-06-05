@@ -40,12 +40,11 @@
             </div>
             <div class = "header-meddle" >
                 <ul>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
+                    <?php foreach($TableItemHeader as $item){
+                        if($item->status == 10) {
+                    ?>
+                        <li><?= $item->title ?></li>
+                    <?php }} ?>
                 </ul>
             </div>
             <div class = "header-down" >

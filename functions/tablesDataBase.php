@@ -1,6 +1,8 @@
 <?php 
     // pageMove
     $TablePageMove = readTable ("adidas", "SELECT * FROM adidas.page_move", $single = false, $execute = null);
+    // itemHeader
+    $TableItemHeader = readTable ("adidas", "SELECT * FROM adidas.item_header", $single = false, $execute = null);
     // header
     $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
     // megaMenu_title
