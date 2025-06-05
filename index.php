@@ -36,7 +36,7 @@
     <header>
         <div class = "header-top">
             <div class = 'header-up'>
-                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing</h3>
+                <h3>FREE STANDARD SHIPPING WITH ADICLUB</h3>
                 <i class="bi bi-chevron-down"></i>
             </div>
             <div class = "header-meddle" >
