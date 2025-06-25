@@ -139,7 +139,7 @@ titleMenuItem.forEach((title, index)=> {
 clickHeaderMenu.addEventListener("click",(e)=>{
     menuHeader.style.display = "flex"
     menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
-    menuHeader.style.height = window.innerHeight
+    menuHeader.style.height = "100%"
     body.style.overflow = "hidden"
 })
 
@@ -163,15 +163,7 @@ exitItem.addEventListener("click", (e)=>{
 // })
 // scrollHeader()
 window.addEventListener('resize', (e)=> {
-    body.style.overflow = "auto"
-    closeListContainer()
-    closePageProduct()
-    if(window.innerWidth < 750){
-        menuHeader.style.display = "none" 
-    }
-    else {
-        menuHeader.style.display = "flex"   
-    }
+
 
 })
 
@@ -284,13 +276,24 @@ const resize_window = () => {
 }
 // resize
 window.addEventListener("resize",(e)=> {
-  resize_window()
-  closeMegeMenu()
-  closeSiderToSider()
+    resize_window()
+    body.style.overflow = "auto"
+    closeListContainer()
+    closePageProduct()
+    if(window.innerWidth < 750){
+        menuHeader.style.display = "none" 
+    }
+    else {
+        menuHeader.style.display = "flex"   
+    }
+
 })
 resize_window()
 hideBorderRight()
 
+
+  
+ 
 //scroll
 window.addEventListener("scroll", ()=> {
     if (document.documentElement.scrollTop >= 155){
@@ -303,6 +306,9 @@ window.addEventListener("scroll", ()=> {
         header.className ="header-animation-reverse"    
     }
 })
+
+
+
 
 
 for (let i = 0; i< listUl.length; i++ ){
