@@ -13,9 +13,7 @@ let main = document.querySelector('main')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
-let headerLi = document.querySelectorAll(".header-item li")
 let megaMenu = document.querySelectorAll(".all-megaMenu")
-let headerItem = document.querySelector('.header-item')
 let  iconHeart = document.querySelectorAll(".heart-click")
 let arrowLeft = document.querySelector(".bi-arrow-left-square")
 let arrowRight = document.querySelector(".bi-arrow-right-square")
@@ -33,6 +31,153 @@ let backSider = document.querySelectorAll(".backSider");
 
 // console.log(document.querySelectorAll('.').length)
 
+const clickHeaderMenu =  document.querySelector(".clickHeaderMenu")
+const menuHeader = document.querySelector(".menuHeader")
+const exitItem = document.querySelector(".exitItem")
+const titleMenuItem = document.querySelectorAll(".titleMenuItem")
+const listContainer = document.querySelectorAll(".listContainer")
+const backButtonList = document.querySelectorAll(".backButtonList")
+const crossButtonList = document.querySelectorAll(".crossButtonList")
+const menuItem = document.querySelectorAll(".menuItem")
+const titleListMenu = document.querySelectorAll(".titleListMenu")
+const pageProduct = document.querySelectorAll('.pageProduct')
+const backButtonProduct = document.querySelectorAll('.backButtonProduct')
+const crossButtonProduct = document.querySelectorAll('.crossButtonProduct')
+
+crossButtonProduct.forEach((cross, index)=> {
+    cross.addEventListener("click", (e)=> {
+        pageProduct[index].style.animation = "moveListContainerReverse .5s linear forwards"  
+        setTimeout(()=> {
+            pageProduct[index].style.display = "none"
+            closeListContainer()
+            closeMenuHeader()
+        }, 300)
+        
+    })
+})
+
+backButtonProduct.forEach((back, index)=> {
+    back.addEventListener('click', (e)=> {
+        pageProduct[index].style.animation = "moveListContainerReverse .5s linear forwards"
+        setTimeout(() => {
+            pageProduct[index].style.display = "none"  
+        }, 500);
+    })
+})
+titleListMenu.forEach((list, index)=> {
+    list.addEventListener("click", (e)=> {
+        if(window.innerWidth < 750){
+            pageProduct[index].style.display = "flex"
+            pageProduct[index].style.animation = "moveListContainer .5s linear forwards"
+        }             
+    })
+})
+
+
+menuItem.forEach((title, index)=> {
+    title.addEventListener("mouseleave", (e)=> {
+        if(window.innerWidth > 750){
+            listContainer[index].style.display = "none"
+        }
+    })
+})
+
+const closePageProduct = () => {
+    pageProduct.forEach(page=>{
+        page.style.display = 'none'
+    })  
+}
+
+menuItem.forEach((title, index)=> {
+    title.addEventListener("mousemove", (e)=> {
+        if(window.innerWidth > 750){
+            listContainer[index].style.display = "flex"
+            listContainer[index].style.animation = "listContainerTop .3s linear forwards" ; 
+            const pages =  listContainer[index].querySelectorAll(".pageProduct")  
+            pages.forEach(page => {
+                page.style.display = "flex"
+            });              
+        }
+    })
+})
+
+const closeListContainer = () => {
+    listContainer.forEach((list, index)=> {
+        list.style.display = "none"
+    })
+}
+crossButtonList.forEach((cross, index)=>{
+    cross.addEventListener("click", (e)=> {
+        listContainer[index].style.animation = "moveListContainerReverse .5s linear forwards"
+        setTimeout(()=> {
+            listContainer[index].style.display = "none"
+            closeMenuHeader()
+        }, 300)
+        
+        
+    })
+})
+backButtonList.forEach((back, index)=> {
+    back.addEventListener("click", (e)=> {
+        listContainer[index].style.animation = "moveListContainerReverse .5s linear forwards"
+        setTimeout(() => {
+            listContainer[index].style.display = "none"  
+        }, 500);
+
+    })
+})
+
+titleMenuItem.forEach((title, index)=> {
+    title.addEventListener("click", (e)=>{
+        if(window.innerWidth < 750){
+            listContainer[index].style.display = "flex"
+            listContainer[index].style.animation = "moveListContainer .5s linear forwards"
+        }
+    })
+})
+
+clickHeaderMenu.addEventListener("click",(e)=>{
+    menuHeader.style.display = "flex"
+    menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+    menuHeader.style.height = window.innerHeight
+    body.style.overflow = "hidden"
+})
+
+const closeMenuHeader = () => {
+    menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  
+    body.style.overflow = "auto"
+    setTimeout(()=> {
+        menuHeader.style.display = "none"
+        menuHeader.style.height = "100%"
+    }, 500)
+}
+exitItem.addEventListener("click", (e)=>{
+    closeMenuHeader()
+})
+
+// const scrollHeader = () => {
+//     header.style.animation =  body.scrollTop > 100 ?   "headerUpper .5s linear forwards":"headerDown .5s linear forwards"
+// }
+// window.addEventListener("scroll", (e)=> {
+//     scrollHeader()
+// })
+// scrollHeader()
+window.addEventListener('resize', (e)=> {
+    body.style.overflow = "auto"
+    closeListContainer()
+    closePageProduct()
+    if(window.innerWidth < 750){
+        menuHeader.style.display = "none" 
+    }
+    else {
+        menuHeader.style.display = "flex"   
+    }
+
+})
+
+
+
+
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
@@ -49,101 +194,6 @@ crossPage.addEventListener("click", (evnet)=> {
     headerMain.style.opacity = 1
     main.style.opacity = 1 
 })
-
-// megaMenu
-const closeMegeMenu = () => {
-    for (let i = 0; i < megaMenu.length; i++){
-        megaMenu[i].classList.add('deactive')
-    }
-}
-for (let i = 0;  i < headerLi.length ; i++){
-    headerLi[i].addEventListener("mousemove", (event)=>{
-        closeMegeMenu()
-        megaMenu[i].classList.remove("deactive");
-    })
-}
-
-for (let i = 0;  i < headerLi.length ; i++){
-    headerLi[i].addEventListener("mouseleave", (event)=>{
-        closeMegeMenu()
-    })
-}
-
-
-
-
-// sidebar
-listIcon.addEventListener("click", e=>{
-    sidebar.classList.add("sidebarAnimation")
-    body.style.overflow = "hidden"
-    headerMain.style.opacity = .3
-    main.style.opacity = .3 
-})
-
-crossSidebar.addEventListener("click", e=>{
-    sidebar.classList.remove("sidebarAnimation")
-    body.style.overflow = ""
-    headerMain.style.opacity = 1
-    main.style.opacity = 1
-})
-const closeSidebar = () => {
-    sidebar.classList.remove("sidebarAnimation")
-    body.style.overflow = ""
-    headerMain.style.opacity = 1
-    main.style.opacity = 1
-}
-// sider to sider
-
-// open
-for (let i = 0; i < titleSidebar.length; i++){
-    titleSidebar[i].addEventListener("click", (e)=> {
-        sidebarToInTo[i].style.display = 'flex'
-        sidebarToInTo[i].classList.remove('animationSiderbarToinToReverse')
-        sidebarToInTo[i].classList.add('animationSiderbarToinTo')
-    })
-}
-
-const closeSiderToSider = () => {
-    for (let i = 0; i < titleSidebar.length; i++){
-        sidebarToInTo[i].classList.remove('animationSiderbarToinTo')
-        sidebarToInTo[i].classList.add('animationSiderbarToinToReverse')
-    }
-}
-
-// close 
-for (let i = 0; i < backSider.length; i++ ){
-    backSider[i].addEventListener("click", (e)=>{
-        sidebarToInTo[i].classList.remove('animationSiderbarToinTo')
-        sidebarToInTo[i].classList.add('animationSiderbarToinToReverse')
-    })
-}
-
-// sidebar to sidebar
-let siderContainer = document.querySelectorAll(".siderContainer")
-let sidebarToSidebar = document.querySelectorAll('.sidebarToSidebar')
-let sidebarToSidebarBack = document.querySelectorAll('.sidebarToSidebar-back')
-
-for (let i = 0; i< siderContainer.length; i++){
-    siderContainer[i].addEventListener("click", (e)=>{
-        sidebarToSidebar[i].style.display = "flex"
-        sidebarToSidebar[i].classList.remove('animationSiderbarToinToReverse')
-        sidebarToSidebar[i].classList.add('animationSiderbarToinTo')
-    })
-}
-
-const closeSliderToSlider = () => {
-    for (let i = 0; i < sidebarToSidebar.length; i++){
-        sidebarToSidebar[i].classList.remove('animationSiderbarToinTo')
-        sidebarToSidebar[i].classList.add('animationSiderbarToinToReverse')
-    }
-}
-for (let i = 0; i< sidebarToSidebarBack.length; i++){
-    sidebarToSidebarBack[i].addEventListener("click", (e)=>{
-        closeSliderToSlider()
-        sidebarToSidebar[i].classList.remove('animationSiderbarToinTo')
-        sidebarToSidebar[i].classList.add('animationSiderbarToinToReverse')
-    })
-}
 
 
 // icon Heart
@@ -219,7 +269,7 @@ const resize_window = () => {
         hiddenListLi ()
         footer.style.display = "none"
         footerBlack.style.display = ""
-        sidebar.style.display = ""
+        // sidebar.style.display = ""
     }
     else {
         iconQuery.style.display = "none"
@@ -228,8 +278,8 @@ const resize_window = () => {
         footer.style.display = ""
         footerBlack.style.display = "none"
         hideBorderRight()
-        sidebar.style.display = "none"
-        closeSidebar()
+        // sidebar.style.display = "none"
+        // closeSidebar()
     }
 }
 // resize

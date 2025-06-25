@@ -49,28 +49,54 @@
             </div>
             <div class = "header-down" >
 
-                <div class="icon-query">
-                    <i class="bi bi-list"></i>
+                <div class="icon-query" style = "background-color : red">
+                    <div class="clickHeaderMenu">list</div>
                     <i class="bi bi-heart"></i>
                 </div>
 
                 <div class = "header-icon">
                     <svg role="img"  viewBox="100 100 50 32" xmlns="http://www.w3.org/2000/svg"><title>Homepage</title><path fill-rule="evenodd" clip-rule="evenodd" d="M 150.07 131.439 L 131.925 100 L 122.206 105.606 L 137.112 131.439 L 150.07 131.439 Z M 132.781 131.439 L 120.797 110.692 L 111.078 116.298 L 119.823 131.439 L 132.781 131.439 Z M 109.718 121.401 L 115.509 131.439 L 102.551 131.439 L 100 127.007 L 109.718 121.401 Z" fill="black"></path></svg>
                 </div>
-                
-                <div class = 'header-item' >
-                    <ul>
-                        <?php foreach($tableHeader as $title){
-                            if ($title->status == 10) {?>
-                                <li><?= $title->title; ?></li>
-                            <?php } 
-                            } 
-                        ?>
-                    </ul>
-                </div>
-                 
+                <!--  -->
+                <div class = "menuHeader">
+                    <div class = "exitHeader">
+                        <div class = "exitItem">
+                            🔳
+                        </div>
+                    </div>
+                    <!-- foreach -->
+                    <div class = "menuItem">
+                        <div class  = "titleMenuItem">
+                            <div>menu</div>
+                            <div class = "iconTitleMenuItem">→</div>
+                        </div>
+                        <div class = "listContainer">
+                            <div class = "backContainer">
+                                <div class ="backButtonList">back ⬅️</div>
+                                <div class = "crossButtonList">corss ❌</div>
+                            </div>
+                            <!-- foreach -->
+                            <div class = "productContainer">
+                                <div class = "titleListMenu">
+                                    <div>list</div>
+                                    <div class = "iconTitleMenuList">→</div>
+                                </div>
+                                <div class = "pageProduct">
+                                    <div class = "backContainer">
+                                        <div class ="backButtonProduct">back ⬅️</div>
+                                        <div class = "crossButtonProduct">corss ❌</div>
+                                    </div>
+                                    <!-- foreach -->
+                                    <div class = "titleProduct">
+                                        <div>product</div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!--  -->
                
-                
                 <div class = "header-search">
                     <input type="search" placeholder="search">
                     <div>
@@ -89,131 +115,7 @@
         </div>
     </header>
 
-    <!-- SIDE BAR -->
-    <div class="sidebar">
-        <div class = 'sidebar-svg-cross'>
-            <svg role="img"  viewBox="100 100 50 32" xmlns="http://www.w3.org/2000/svg"><title>Homepage</title><path fill-rule="evenodd" clip-rule="evenodd" d="M 150.07 131.439 L 131.925 100 L 122.206 105.606 L 137.112 131.439 L 150.07 131.439 Z M 132.781 131.439 L 120.797 110.692 L 111.078 116.298 L 119.823 131.439 L 132.781 131.439 Z M 109.718 121.401 L 115.509 131.439 L 102.551 131.439 L 100 127.007 L 109.718 121.401 Z" fill="black"></path></svg>
-            <i class="bi bi-x-lg"></i>
-        </div>
-
-        <div class = "sidebar-container">
-            <?php foreach($tableHeader as $title){
-                if ($title->status == 10) {?>
-                <div class = "sidebar-item">
-                    <div class = 'title-sidebar'><?= $title->title ?></div>
-                    <div><i class="bi bi-chevron-right"></i></div>
-                </div>
-            <?php }
-            }
-            ?>
-        </div>
-
-        <div class = "siderbar-list">
-            <div>
-                My Account
-            </div>
-            <div>
-                Exchanges & Returns
-            </div>
-            <div>
-                Order Tracker
-            </div>
-            <div>
-                adiClub
-            </div>
-            <div>
-                Gift Cards
-            </div>
-            <div>
-                Store Locator
-            </div>
-            <div>
-                Mobile Apps
-            </div>
-        </div>
-
-        <div class = "sidebar-languge">
-            United States
-        </div>
-    </div>   
-        
-    <!-- sidebar intointo -->
-    <?php foreach($tableHeader as $header) { ?>     
-        <div class="sidebarToInTo">
-            <div class = 'sidebar-back'>
-                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $header->title ?></i>
-                <i class="bi bi-x-lg"></i>
-            </div>
-            <div class = "sidebar-container">
-                <?php  foreach($TableMegaMenuTitle as $category) {
-                    if ($category->title == $header->title){
-                        if($category->status == 10){ 
-                ?>
-                    <div class = "siderContainer">
-                        <div><?= $category->category ?> </div>
-                            <div><i class="bi bi-chevron-right"></i></div>
-                        </div>         
-                <?php }}}?>
-            </div> 
-        </div>   
-    <?php } ?>
-    
-    <!-- sidebarToSidebar -->
-    <?php 
-    foreach ($tableHeader as $title){
-        foreach($TableMegaMenuTitle as $category){
-                if($title->title == $category->title){
-                    if($category->status == 10){
-    ?>    
-        <div class="sidebarToSidebar">
-            <div class = 'sidebarToSidebar-back'>
-                <i class="bi bi-chevron-left backSider"> &nbsp;<?= $category->category ?></i>
-                <i class="bi bi-x-lg"></i>
-            </div>
-            <div class = "sidebar-container">
-                <?php 
-                    foreach($TableMegaMenuProduct as $product){
-                        if($product->category == $category->category && $product->title == $title->title){
-                            if($product->status == 10){
-                ?>
-                    <div class = "sidebarToSidebarItem">
-                        <div><?= $product->product ?> </div>
-                    </div>      
-                
-                <?php }} } ?>    
-            </div>
-        </div>   
-    <?php } }}}?>
-    
-    <!-- MEGA MENU -->
-    <?php foreach($tableHeader as $title) { ?>    
-        <div class = 'all-megaMenu deactive' >
-            <div class = "megaMenu">
-                <?php  foreach($TableMegaMenuTitle as $category) {
-                    if ($category->title == $title->title){
-                        if($category->status == 10){ 
-                ?>
-                    <div>
-                        <ul><?= $category->category ?> 
-                            <?php foreach($TableMegaMenuProduct as $product){ 
-                                if($product->category == $category->category && $product->title == $title->title ) {
-                                    if($product->status == 10) {?> 
-                                        <li><?= $product->product ?></li>
-                            <?php } } }?>
-                        </ul>
-                    </div>
-                <?php }}} ?>
-            </div>
-            <div class = 'title-megaMenu'>
-                <div>one</div>
-                <div>two</div>
-                <div>three</div>
-                <div>four</div>
-                <div>five</div>
-                <div>six</div>
-            </div>
-        </div>
-    <?php } ?>
+     
     <!-- BETTWEN header & main -->
     <div class = "header-main">
         <div class = "header-main-up" >
