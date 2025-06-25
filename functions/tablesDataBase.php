@@ -4,7 +4,7 @@
     // itemHeader
     $TableItemHeader = readTable ("adidas", "SELECT * FROM adidas.item_header", $single = false, $execute = null);
     // header
-    $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header", $single = false, $execute = null);
+    $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header WHERE status = 10", $single = false, $execute = null);
     // megaMenu_title
     $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
     // megaMenu_product

@@ -49,7 +49,7 @@
             </div>
             <div class = "header-down" >
 
-                <div class="icon-query" style = "background-color : red">
+                <div class="icon-query">
                     <div class="clickHeaderMenu">list</div>
                     <i class="bi bi-heart"></i>
                 </div>
@@ -65,35 +65,37 @@
                         </div>
                     </div>
                     <!-- foreach -->
-                    <div class = "menuItem">
-                        <div class  = "titleMenuItem">
-                            <div>menu</div>
-                            <div class = "iconTitleMenuItem">→</div>
-                        </div>
-                        <div class = "listContainer">
-                            <div class = "backContainer">
-                                <div class ="backButtonList">back ⬅️</div>
-                                <div class = "crossButtonList">corss ❌</div>
+                    <?php foreach($tableHeader as $menu){ ?>
+                        <div class = "menuItem">
+                            <div class  = "titleMenuItem">
+                                <div><?= $menu->title ?></div>
+                                <div class = "iconTitleMenuItem">→</div>
                             </div>
-                            <!-- foreach -->
-                            <div class = "productContainer">
-                                <div class = "titleListMenu">
-                                    <div>list</div>
-                                    <div class = "iconTitleMenuList">→</div>
+                            <div class = "listContainer">
+                                <div class = "backContainer">
+                                    <div class ="backButtonList">back ⬅️</div>
+                                    <div class = "crossButtonList">corss ❌</div>
                                 </div>
-                                <div class = "pageProduct">
-                                    <div class = "backContainer">
-                                        <div class ="backButtonProduct">back ⬅️</div>
-                                        <div class = "crossButtonProduct">corss ❌</div>
+                                <!-- foreach -->
+                                <div class = "productContainer">
+                                    <div class = "titleListMenu">
+                                        <div>list</div>
+                                        <div class = "iconTitleMenuList">→</div>
                                     </div>
-                                    <!-- foreach -->
-                                    <div class = "titleProduct">
-                                        <div>product</div>
-                                    </div>
-                                </div>   
+                                    <div class = "pageProduct">
+                                        <div class = "backContainer">
+                                            <div class ="backButtonProduct">back ⬅️</div>
+                                            <div class = "crossButtonProduct">corss ❌</div>
+                                        </div>
+                                        <!-- foreach -->
+                                        <div class = "titleProduct">
+                                            <div>product</div>
+                                        </div>
+                                    </div>   
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>  
                 <!--  -->
                

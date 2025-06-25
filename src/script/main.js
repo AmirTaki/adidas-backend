@@ -27,10 +27,7 @@ let sidebar = document.querySelector(".sidebar")
 let crossSidebar = document.querySelector(".sidebar-svg-cross i")
 let titleSidebar = document.querySelectorAll(".sidebar-item")
 let sidebarToInTo = document.querySelectorAll('.sidebarToInTo')
-let backSider = document.querySelectorAll(".backSider");
-
-// console.log(document.querySelectorAll('.').length)
-
+let backSider = document.querySelectorAll(".backSider")
 const clickHeaderMenu =  document.querySelector(".clickHeaderMenu")
 const menuHeader = document.querySelector(".menuHeader")
 const exitItem = document.querySelector(".exitItem")
@@ -248,7 +245,6 @@ const resize_window = () => {
         hiddenListLi ()
         footer.style.display = "none"
         footerBlack.style.display = ""
-        // sidebar.style.display = ""
     }
     else {
         iconQuery.style.display = "none"
@@ -257,8 +253,6 @@ const resize_window = () => {
         footer.style.display = ""
         footerBlack.style.display = "none"
         hideBorderRight()
-        // sidebar.style.display = "none"
-        // closeSidebar()
     }
 }
 // resize
@@ -277,8 +271,6 @@ window.addEventListener("resize",(e)=> {
 })
 resize_window()
 hideBorderRight()
-
-
   
  
 //scroll
@@ -295,9 +287,6 @@ window.addEventListener("scroll", ()=> {
 })
 
 
-
-
-
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{
         if (window.innerWidth < 850){
@@ -307,7 +296,5 @@ for (let i = 0; i< listUl.length; i++ ){
        
     })
 }
-
-
 
 
