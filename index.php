@@ -90,9 +90,12 @@
                                                 <div class = "crossButtonProduct">corss ❌</div>
                                             </div>
                                             <!-- foreach -->
-                                            <div class = "titleProduct">
-                                                <div>product</div>
-                                            </div>
+                                            <?php foreach($TableMegaMenuProduct as $product) {
+                                                if($product->category === $category->category && $product->title === $menu->title) {?>
+                                                    <div class = "titleProduct">
+                                                        <div><?= $product->product ?></div>
+                                                    </div>
+                                            <?php }} ?>
                                         </div>   
                                     </div>
                                 <?php }} ?>
