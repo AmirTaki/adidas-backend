@@ -77,22 +77,25 @@
                                     <div class = "crossButtonList">corss ❌</div>
                                 </div>
                                 <!-- foreach -->
-                                <div class = "productContainer">
-                                    <div class = "titleListMenu">
-                                        <div>list</div>
-                                        <div class = "iconTitleMenuList">→</div>
+                                <?php foreach($TableMegaMenuTitle as $category){
+                                    if($category->title === $menu->title){ ?>
+                                    <div class = "productContainer">
+                                        <div class = "titleListMenu">
+                                            <div><?= $category->category ?></div>
+                                            <div class = "iconTitleMenuList">→</div>
+                                        </div>
+                                        <div class = "pageProduct">
+                                            <div class = "backContainer">
+                                                <div class ="backButtonProduct">back ⬅️</div>
+                                                <div class = "crossButtonProduct">corss ❌</div>
+                                            </div>
+                                            <!-- foreach -->
+                                            <div class = "titleProduct">
+                                                <div>product</div>
+                                            </div>
+                                        </div>   
                                     </div>
-                                    <div class = "pageProduct">
-                                        <div class = "backContainer">
-                                            <div class ="backButtonProduct">back ⬅️</div>
-                                            <div class = "crossButtonProduct">corss ❌</div>
-                                        </div>
-                                        <!-- foreach -->
-                                        <div class = "titleProduct">
-                                            <div>product</div>
-                                        </div>
-                                    </div>   
-                                </div>
+                                <?php }} ?>
                             </div>
                         </div>
                     <?php } ?>

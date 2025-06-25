@@ -6,9 +6,9 @@
     // header
     $tableHeader = readTable ('adidas', "SELECT * FROM adidas.header WHERE status = 10", $single = false, $execute = null);
     // megaMenu_title
-    $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megamenu_title", $single = false, $execute = null);
+    $TableMegaMenuTitle = readTable ("adidas", "SELECT * FROM adidas.megamenu_title WHERE status = 10", $single = false, $execute = null);
     // megaMenu_product
-    $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product", $single = false, $execute = null);
+    $TableMegaMenuProduct = readTable ("adidas", "SELECT * FROM adidas.megamenu_product WHERE status = 10", $single = false, $execute = null);
     // background
     $background = readTable ("adidas", "SELECT * FROM adidas.background", $single = true, $execute = null);
     // advert_main
