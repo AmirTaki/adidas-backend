@@ -66,7 +66,7 @@ backButtonProduct.forEach((back, index)=> {
 })
 titleListMenu.forEach((list, index)=> {
     list.addEventListener("click", (e)=> {
-        if(window.innerWidth < 750){
+        if(window.innerWidth < 850){
             pageProduct[index].style.display = "flex"
             pageProduct[index].style.animation = "moveListContainer .5s linear forwards"
         }             
@@ -76,7 +76,7 @@ titleListMenu.forEach((list, index)=> {
 
 menuItem.forEach((title, index)=> {
     title.addEventListener("mouseleave", (e)=> {
-        if(window.innerWidth > 750){
+        if(window.innerWidth > 850){
             listContainer[index].style.display = "none"
         }
     })
@@ -90,7 +90,7 @@ const closePageProduct = () => {
 
 menuItem.forEach((title, index)=> {
     title.addEventListener("mousemove", (e)=> {
-        if(window.innerWidth > 750){
+        if(window.innerWidth > 850){
             listContainer[index].style.display = "flex"
             listContainer[index].style.animation = "listContainerTop .3s linear forwards" ; 
             const pages =  listContainer[index].querySelectorAll(".pageProduct")  
@@ -129,7 +129,7 @@ backButtonList.forEach((back, index)=> {
 
 titleMenuItem.forEach((title, index)=> {
     title.addEventListener("click", (e)=>{
-        if(window.innerWidth < 750){
+        if(window.innerWidth < 850){
             listContainer[index].style.display = "flex"
             listContainer[index].style.animation = "moveListContainer .5s linear forwards"
         }
@@ -140,6 +140,7 @@ clickHeaderMenu.addEventListener("click",(e)=>{
     menuHeader.style.display = "flex"
     menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
     menuHeader.style.height = "100%"
+    menuHeader.style.backgroundColor = "white"
     body.style.overflow = "hidden"
 })
 
@@ -154,20 +155,6 @@ const closeMenuHeader = () => {
 exitItem.addEventListener("click", (e)=>{
     closeMenuHeader()
 })
-
-// const scrollHeader = () => {
-//     header.style.animation =  body.scrollTop > 100 ?   "headerUpper .5s linear forwards":"headerDown .5s linear forwards"
-// }
-// window.addEventListener("scroll", (e)=> {
-//     scrollHeader()
-// })
-// scrollHeader()
-window.addEventListener('resize', (e)=> {
-
-
-})
-
-
 
 
 // Page Move
@@ -280,7 +267,7 @@ window.addEventListener("resize",(e)=> {
     body.style.overflow = "auto"
     closeListContainer()
     closePageProduct()
-    if(window.innerWidth < 750){
+    if(window.innerWidth < 850){
         menuHeader.style.display = "none" 
     }
     else {
